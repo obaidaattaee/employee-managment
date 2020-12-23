@@ -33,6 +33,12 @@ class LoginController extends Controller
         }elseif(auth()->user()->type == 'super_admin'){
             return '/admin';
         }
+       elseif(auth()->user()->type == 'customer'){
+            return '/site/customer/report';
+        }
+        elseif(auth()->user()->type == 'employee'){
+            return '/site/employee/report';
+        }
 
         return '/home';
 
@@ -61,4 +67,11 @@ class LoginController extends Controller
     {
         return $request->only($this->username(), 'password' , 'code' );
     }
+    public function showCompanyLoginForm(){
+
+        return view('auth.company_login');
+
+    }
+
+
 }

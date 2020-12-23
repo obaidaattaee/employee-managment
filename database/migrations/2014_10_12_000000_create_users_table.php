@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('code');
+            $table->integer('salary')->default(0);
             $table->enum('type' , ['super_admin' , 'company' , 'employee' , 'customer']) ;
             $table->rememberToken();
             $table->timestamps();

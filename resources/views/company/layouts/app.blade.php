@@ -50,6 +50,8 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="{{asset('assets/admin/layout4/css/custom-rtl.css')}}" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
+<link rel="stylesheet" href="cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+<script src="cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 @yield('css')
 </head>
 <!-- END HEAD -->
@@ -92,6 +94,9 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="../../assets/global/plugins/respond.min.js"></script>
     <script src="../../assets/global/plugins/excanvas.min.js"></script>
     <![endif]-->
+    <script>$(document).ready( function () {
+        $('#myTable').DataTable();
+    } );</script>
     @yield('js')
     <script src="{{asset('assets/global/plugins/jquery.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/global/plugins/jquery-migrate.min.js')}}" type="text/javascript"></script>

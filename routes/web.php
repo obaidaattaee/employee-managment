@@ -18,7 +18,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
+Route::get('employee/register' , 'App\Http\Controllers\Auth\RegisterController@showUserRegisterFrom')->name('user.register');
+Route::get('customer/register' , 'App\Http\Controllers\Auth\RegisterController@showCustomerRegisterFrom')->name('customer.register');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware(['auth' , 'super_admin' ])->namespace('\App\Http\Controllers\Admin')->group(function () {
@@ -34,11 +35,33 @@ Route::prefix('admin')->middleware(['auth' , 'super_admin' ])->namespace('\App\H
     Route::get('admin/companies/{company}' , 'CompanyController@index')->name('companies.index');
 });
 
-Route::prefix('company')->namespace('App\Http\Controllers\Company')->group(function () {
-    Route::get('register' , 'CompanyRegisterController@showRegistrationForm')->name('company.register') ;
-    Route::post('register' , 'CompanyRegisterController@register')->name('company.register.store') ;
-    Route::get('login' , 'CompanyLoginController@showLoginForm')->name('company.login') ;
-    Route::post('login' , 'CompanyLoginController@login')->name('company.login.store') ;
-
+Route::prefix('company')->middleware('company' , 'auth')->namespace('App\Http\Controllers\Company')->group(function () {
     Route::get('/' , 'CompanyController@index')->name('company.index') ;
+    Route::get('/employees' , 'EmployeeController@index')->name('company.employees') ;
+    Route::get('/employees/q' , 'EmployeeController@index')->name('company.employees.qwqwqw') ;
+    Route::get('/employee/{user}/report' , 'EmployeeController@reports')->name('company.employee.reports') ;
+    Route::get('/employee/{user}/report/{report}/show' , 'EmployeeController@show')->name('company.employee.reports.show') ;
+    Route::get('/employee/percentage/' , 'EmployeeController@percentage')->name('company.employees.percentage') ;
+    Route::post('/employee/{user}/cahnge/salary' , 'EmployeeController@cahngeEmployeeSalary')->name('cahnge.employee.salary') ;
+
+    Route::get('/monthly/reports' , 'CompanyController@monthlyReplorts')->name('company.monthly.reports') ;
+
+});
+
+Route::prefix('site')->namespace('App\Http\Controllers\User')->group(function(){
+
+    Route::middleware('auth')->group(function () {
+        Route::get('/customer/report' , 'SiteController@index')->name('site.index') ;
+        Route::middleware('employee')->group(function () {
+            Route::get('/employee/report' , 'SiteController@employeeReport')->name('site.index') ;
+            Route::post('/employee/report' , 'SiteController@employeeReportStore')->name('site.employee.report') ;
+            });
+        Route::middleware('customer')->group(function (){
+            Route::get('/customer/report' , 'SiteController@cutomerReport')->name('site.customer.index') ;
+            Route::post('/customer/report' , 'SiteController@cutomerReportStotre')->name('site.customer.report') ;
+
+        });
+
+        Route::get('/' , 'UserController@index')->name('company.index') ;
+    });
 });

@@ -82,8 +82,7 @@ class RegisterController extends Controller
     {
         $digits = 4;
         $code = rand(pow(10, $digits-1), pow(10, $digits)-1);
-        $data['code'] = $code ;
-        // dd($data);
+        $data['code'] = $data['code'] ?? $code ;
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -94,4 +93,14 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+    public function showUserRegisterFrom()
+    {
+        return view('auth.user_register');
+    }
+    public function showCustomerRegisterFrom(){
+
+        return view('auth.customer_register');
+
+    }
+
 }

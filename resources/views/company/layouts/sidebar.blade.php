@@ -43,29 +43,36 @@
 
                 </ul>
             </li> --}}
-            {{-- <li>
-                <a href="{{route('dash_cust')}}">
+            <li>
+                <a href="{{route('company.employees.qwqwqw')}}">
                 <i class="icon-puzzle"></i>
-                <span class="title">العملاء</span>
+                <span class="title">الموظفين</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('company.employees.percentage')}}">
+                <i class="icon-puzzle"></i>
+                <span class="title">نسبة الموظف</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('company.employees')}}">
+                <i class="icon-puzzle"></i>
+                <span class="title">انجازات الموظفين</span>
                 </a>
             </li>
             <!-- BEGIN ANGULARJS LINK -->
             <li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="AngularJS version demo">
-                <a href="angularjs" target="_blank">
+                <a href="{{ route('company.monthly.reports') }}" target="_blank">
                 <i class="icon-paper-plane"></i>
                 <span class="title">
                 التقارير الشهريه </span>
 
                 </a>
-            </li> --}}
+            </li>
             <!-- END ANGULARJS LINK -->
 
-            <li>
-                <a href="javascript:;">
-                <i class="icon-settings"></i>
-                <span class="title">التقارير السنوية</span>
-                </a>
-            </li>
+
             {{-- <li>
                 <a href="javascript:;">
                 <i class="icon-diamond"></i>

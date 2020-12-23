@@ -31,7 +31,10 @@
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
+                            <a href="{{ route('user.register') }}" class="ml-4 text-sm text-gray-700 underline">user.register</a>
+                            <a href="{{ route('customer.register') }}" class="ml-4 text-sm text-gray-700 underline">customer.register</a>
+
+                            @endif
                     @endauth
                 </div>
             @endif

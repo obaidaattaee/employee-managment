@@ -146,7 +146,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 		<div class="form-group">
 			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-			<label class="control-label visible-ie8 visible-ie9">كود الشركة</label>
+			<label class="control-label visible-ie8 visible-ie9">البريد الالكتروني</label>
 			<input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="البريد الالكتروني " name="email"/>
         </div>
         <div class="form-group">
