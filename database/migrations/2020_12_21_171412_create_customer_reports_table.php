@@ -15,6 +15,14 @@ class CreateCustomerReportsTable extends Migration
     {
         Schema::create('customer_reports', function (Blueprint $table) {
             $table->id();
+            $table->string('phone');
+            $table->foreignId('customer_id')->constrained('users' , 'id');
+            $table->string('customer_name');
+            $table->foreignId('company_id')->constrained('users' , 'id');
+            $table->foreignId('employee_id')->constrained('users' , 'id');
+            $table->string('evaluation');
+            $table->json('images');
+            $table->text('notes');
             $table->timestamps();
         });
     }

@@ -44,7 +44,7 @@
                             <div class="section-head">
                                 <div class="mt-separator-outer separator-left">
                                     <div class="mt-separator">
-                                        <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 text-primary"> تقرير  </span>  الموظف </h2>
+                                        <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 text-primary"> تقرير  </span>  العميل </h2>
                                     </div>
                                 </div>
                             </div>
@@ -55,15 +55,16 @@
 
                                 <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <label>اسم الموظف</label>
+                                    <label>اسم العميل</label>
+                                    <input  name="employee_name" type="text"  class="form-control"  required>
                                     <input  name="employee_name" type="text"  class="form-control"  required>
                                 </div>
 
                                     <div class="col-md-6 form-group">
-                                        <label for="emo_id" class="caption-subject bold uppercase">اسم العميل</label>
+                                        <label for="emo_id" class="caption-subject bold uppercase">اسم الموظف</label>
                                         <select name="customer_id" class="form-control">
-                                            <option value=''>اسم العميل</option>
-                                            @foreach(auth()->user()->customers as $emo)
+                                            <option value=''>اسم الموظف</option>
+                                            @foreach(auth()->user()->employees as $emo)
                                                 <option class="form-control select2 "
                                                         {{old('customer_id')== $emo->id?"selected":""}} value='{{$emo->id}}'>{{$emo->name}}</option>
                                             @endforeach
