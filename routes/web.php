@@ -66,6 +66,6 @@ Route::prefix('site')->namespace('App\Http\Controllers\User')->group(function(){
 
         });
 
-        Route::get('/' , 'UserController@index')->name('company.index') ;
+        Route::get('/' , 'UserController@index')->name('user.index') ;
     });
 });

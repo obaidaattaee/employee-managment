@@ -44,6 +44,12 @@
                 </ul>
             </li> --}}
             <li>
+                <a href="{{route('company.index')}}">
+                <i class="icon-puzzle"></i>
+                <span class="title"> لوحة التحكم</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{route('company.employees.qwqwqw')}}">
                 <i class="icon-puzzle"></i>
                 <span class="title">الموظفين</span>

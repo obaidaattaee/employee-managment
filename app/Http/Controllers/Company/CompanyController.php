@@ -6,7 +6,7 @@ use App\Models\EmployeeReport;
 
 class CompanyController extends Controller{
     public function index () {
-        return view('company.layouts.app');
+        return view('company.showcode');
     }
     public function monthlyReplorts(){
         try {
