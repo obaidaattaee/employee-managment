@@ -46,7 +46,7 @@
                             {{ $employee->email }}
                         </td>
                         <td>
-                            {{ $employee->reports->sum('overtime')*1.5 + $employee->reports->sum('working_hours')*4.16 }}
+                            {{ round($employee->salary / 30 / 8 , 2) }}
                         </td>
 
                         {{-- <td>

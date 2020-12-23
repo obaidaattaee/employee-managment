@@ -57,7 +57,7 @@
                                 <div class="col-md-6 form-group">
                                     <label>اسم العميل</label>
                                     <input  name="employee_name" type="text"  class="form-control"  required>
-                                    <input  name="employee_name" type="text"  class="form-control"  required>
+                                    <input  name="customer_id" type="text"  class="form-control"  required>
                                 </div>
 
                                     <div class="col-md-6 form-group">

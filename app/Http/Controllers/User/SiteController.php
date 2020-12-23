@@ -65,7 +65,7 @@ class SiteController extends Controller{
             }
         }
         $data['images'] = json_encode($data['images']) ;
-        $data['employee_id'] = auth()->id() ;
+        $data['customer_id'] = auth()->id() ;
 
         EmployeeReport::create($data) ;
         session()->flash('msg' , 's: تم اضافة  التقرير بنجاح') ;
