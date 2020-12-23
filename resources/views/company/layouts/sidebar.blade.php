@@ -61,6 +61,12 @@
                 <span class="title">انجازات الموظفين</span>
                 </a>
             </li>
+            <li>
+                <a href="{{route('company.customers')}}">
+                <i class="icon-puzzle"></i>
+                <span class="title">تقارير العملاء </span>
+                </a>
+            </li>
             <!-- BEGIN ANGULARJS LINK -->
             <li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="AngularJS version demo">
                 <a href="{{ route('company.monthly.reports') }}" target="_blank">

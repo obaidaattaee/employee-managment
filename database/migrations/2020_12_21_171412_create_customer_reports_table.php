@@ -18,7 +18,7 @@ class CreateCustomerReportsTable extends Migration
             $table->string('phone');
             $table->foreignId('customer_id')->constrained('users' , 'id');
             $table->string('customer_name');
-            $table->foreignId('company_id')->constrained('users' , 'id');
+            $table->text('work_space');
             $table->foreignId('employee_id')->constrained('users' , 'id');
             $table->string('evaluation');
             $table->json('images');

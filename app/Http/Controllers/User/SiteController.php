@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\CustomerReport;
 use App\Models\EmployeeReport;
 
 class SiteController extends Controller{
@@ -46,29 +47,33 @@ class SiteController extends Controller{
         return view('site.customer_reports');
     }
     public function cutomerReportStotre (){
-        $data = request()->validate([
-            'phone' => ['required' , 'integer' ] ,
-            'customer_id' => ['required' ] ,
-            'customer_name' => ['required' ] ,
-            'company_id' => ['required' ] ,
-            'evaluation' => ['required'] ,
-            'notes' => ['required'] ,
-        ]);
-        $data['images'] = [] ;
+        try {
+            $data = request()->validate([
+                'phone' => ['required' , 'integer' ] ,
+                'employee_id' => ['required' ] ,
+                'customer_name' => ['required' ] ,
+                'work_space' => ['required' ] ,
+                'evaluation' => ['required'] ,
+                'notes' => ['required'] ,
+            ]);
+            $data['images'] = [] ;
 
 
-        if (!empty(request()->imageFile)) {
-            foreach(request()->imageFile as $key => $image){
-                $image_name = basename($image->store('employee_reports' , 'public'));
-
-                $data['images'][$key] = $image_name;
+            if (!empty(request()->imageFile)) {
+                foreach(request()->imageFile as $key => $image){
+                    $image_name = basename($image->store('customer_reports' , 'public'));
+                    $data['images'][$key] = $image_name;
+                }
             }
-        }
-        $data['images'] = json_encode($data['images']) ;
-        $data['customer_id'] = auth()->id() ;
+            $data['images'] = json_encode($data['images']) ;
+            $data['customer_id'] = auth()->id() ;
 
-        EmployeeReport::create($data) ;
-        session()->flash('msg' , 's: تم اضافة  التقرير بنجاح') ;
-        return redirect (route('site.index')) ;
+            CustomerReport::create($data) ;
+            session()->flash('msg' , 's: تم اضافة  التقرير بنجاح') ;
+            return redirect (route('site.customer.index')) ;
+        } catch (\Throwable $th) {
+            dd($th);
+        }
+
     }
 }

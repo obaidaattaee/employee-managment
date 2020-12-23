@@ -48,6 +48,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @include('shared.msg')
                             <!-- TITLE END -->
                         <form class="contact-form" enctype="multipart/form-data" method="post" action="{{ route('site.customer.report') }}">
                             @csrf
@@ -56,13 +57,13 @@
                                 <div class="row">
                                 <div class="col-md-6 form-group">
                                     <label>اسم العميل</label>
-                                    <input  name="employee_name" type="text"  class="form-control"  required>
-                                    <input  name="customer_id" type="text"  class="form-control"  required>
+                                    <input type="text"  class="form-control"  value="{{auth()->user()->name}}" disabled required>
+                                    <input  name="customer_name" type="hidden" value="{{auth()->user()->name}}"  class="form-control"  required>
                                 </div>
 
                                     <div class="col-md-6 form-group">
                                         <label for="emo_id" class="caption-subject bold uppercase">اسم الموظف</label>
-                                        <select name="customer_id" class="form-control">
+                                        <select name="employee_id" class="form-control">
                                             <option value=''>اسم الموظف</option>
                                             @foreach(auth()->user()->employees as $emo)
                                                 <option class="form-control select2 "
@@ -80,8 +81,8 @@
                                     <input name="phone" type="text" required class="form-control" placeholder="رقم الجوال">
                                 </div>
 
-                                <div class="col-md-6 form-group">
-                                    <label for="emo_id" class="caption-subject bold uppercase">اسم العميل</label>
+                                {{-- <div class="col-md-6 form-group">
+                                    <label for="emo_id" class="caption-subject bold uppercase">مكان العمل </label>
                                     <select name="company_id" class="form-control">
                                         <option value=''>مكان العمل </option>
                                         @foreach(auth()->user()->companies as $emo)
@@ -89,21 +90,16 @@
                                                     {{old('company_id')== $emo->id?"selected":""}} value='{{$emo->id}}'>{{$emo->address}}</option>
                                         @endforeach
                                     </select>
+                                </div> --}}
+                                <div class="col-md-6 form-group">
+                                    <label>مكان العمل </label>
+                                    <input name="work_space" type="text" required class="form-control" placeholder="مكان العمل ">
                                 </div>
 
-                                <div class="col-md-6 form-group">
-                                    <label>مصاريف تشغيلية</label>
-                                    <input name="operating_expenses" type="text" required class="form-control" placeholder="مصاريف تشغيلية">
-                                </div>
 
                                 <div class="col-md-6 form-group">
-                                    <label> ساعات العمل</label>
-                                    <input name="working_hours" type="text" required class="form-control" placeholder="ساعات العمل">
-                                </div>
-
-                                <div class="col-md-6 form-group">
-                                    <label>  ساعات العمل الاضافية</label>
-                                    <input name="overtime" type="text" required class="form-control" placeholder="ساعات العمل الاضافية">
+                                    <label>التقييم</label>
+                                    <input name="evaluation" type="text" required class="form-control" placeholder="التقييم">
                                 </div>
 
                                     <div class="col-md-6 form-group custom-file">
@@ -123,7 +119,7 @@
                             {{-- {{dd('request::class')}}; --}}
 
                                 <div class="text-right">
-                                    <button name="submit" type="submit" value="Submit" class="site-button btn-effect">إرسال
+                                    <button type="submit" value="Submit" class="site-button btn-effect">إرسال
 
                                     </button>
                                 </div>

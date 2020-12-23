@@ -10,6 +10,7 @@ class CustomerReport extends Model
 {
     use HasFactory;
     protected $guarded = [] ;
+    protected $appends = ['employee'];
     public function getEmployeeAttribute(){
         return $this->belongsTo(User::class , 'employee_id', 'id' );
     }

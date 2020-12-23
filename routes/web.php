@@ -44,6 +44,10 @@ Route::prefix('company')->middleware('company' , 'auth')->namespace('App\Http\Co
     Route::get('/employee/percentage/' , 'EmployeeController@percentage')->name('company.employees.percentage') ;
     Route::post('/employee/{user}/cahnge/salary' , 'EmployeeController@cahngeEmployeeSalary')->name('cahnge.employee.salary') ;
 
+    Route::get('/cusromer' , 'CustomerController@index')->name('company.customers') ;
+    Route::get('/customer/{user}/report' , 'CustomerController@reports')->name('company.customer.reports') ;
+    Route::get('/customer/{user}/report/{report}/show' , 'CustomerController@show')->name('company.customer.reports.show') ;
+
     Route::get('/monthly/reports' , 'CompanyController@monthlyReplorts')->name('company.monthly.reports') ;
 
 });
