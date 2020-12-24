@@ -68,9 +68,15 @@
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="{{ route('admin.companies.yearly.reports') }}">
                 <i class="icon-settings"></i>
                 <span class="title">التقارير السنوية</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{route('admin.companies.profit')}}">
+                <i class="icon-settings"></i>
+                <span class="title">الربح و الخسارة</span>
                 </a>
             </li>
             <li>

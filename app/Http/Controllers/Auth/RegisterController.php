@@ -40,7 +40,22 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+    protected function redirectTo(){
+        if (auth()->user()->type == 'company') {
+            return '/company';
+        }elseif(auth()->user()->type == 'super_admin'){
+            return '/admin';
+        }
+       elseif(auth()->user()->type == 'customer'){
+            return '/site/customer/report';
+        }
+        elseif(auth()->user()->type == 'employee'){
+            return '/site/employee/report';
+        }
 
+        return '/home';
+
+    }
     /**
      * Get a validator for an incoming registration request.
      *

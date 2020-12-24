@@ -125,7 +125,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{{asset('assets/admin/layout4/scripts/demo.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/pages/scripts/index3.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/pages/scripts/tasks.js')}}" type="text/javascript"></script>
-    <!-- END PAGE LEVEL SCRIPTS -->
+    <script src="{{asset('js/printThis.js')}}" type="text/javascript"></script>
+    <!-- END PAGE LEVEL SCRIPTS  /var/www/html/backend/construct/public/js/printThis.js -->
     <script>
     jQuery(document).ready(function() {
        Metronic.init(); // init metronic core componets

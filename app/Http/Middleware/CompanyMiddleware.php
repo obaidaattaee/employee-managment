@@ -17,7 +17,8 @@ class CompanyMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (auth()->check()) {
-            if (auth()->user()->type !== "company") {
+            if (auth()->user()->type !== "company" || auth()->user()->active !== 1) {
+                session()->flash('msg' , 'w: لم يتم تفعيل حسابك بعد يرجى مراجعة مدير النظام');
                 return redirect(route('home')) ;
             }
         }

@@ -74,12 +74,10 @@
                 </a>
             </li>
             <!-- BEGIN ANGULARJS LINK -->
-            <li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="AngularJS version demo">
+            <li class="tooltips" >
                 <a href="{{ route('company.monthly.reports') }}" target="_blank">
-                <i class="icon-paper-plane"></i>
-                <span class="title">
-                التقارير الشهريه </span>
-
+                    <i class="icon-paper-plane"></i>
+                    <span class="title">التقارير الشهريه</span>
                 </a>
             </li>
             <!-- END ANGULARJS LINK -->

@@ -54,8 +54,15 @@ class User extends Authenticatable
     public function getCompaniesAttribute(){
         return self::where('code' , $this->code)->where('type' , 'company')->get()  ;
     }
-    public function getEmployeesAttribute(){
-        return self::where('code' , $this->code)->where('type' , 'employee')->get()  ;
+    public function getEmployeesAttribute($year = null , $month = null){
+        $employees =  self::where('code' , $this->code)->where('type' , 'employee')  ;
+        if ($year != null) {
+            $employees = $employees->whereIn('id' , EmployeeReport::whereYear('created_at' , $year)->pluck('employee_id')->toArray() ) ;
+        }
+        if ($month != null) {
+            $employees = $employees->whereIn('id' , EmployeeReport::whereMonth('created_at' , $month)->pluck('employee_id')->toArray() ) ;
+        }
+        return $employees->get() ;
     }
     public function getCustomersAttribute(){
         return self::where('code' , $this->code)->where('type' , 'customer')->get()  ;
@@ -63,5 +70,5 @@ class User extends Authenticatable
     public function getReportsAttribute(){
         return $this->hasMany(EmployeeReport::class , 'employee_id' , 'id');
     }
-    
+
 }

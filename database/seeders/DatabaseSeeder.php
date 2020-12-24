@@ -26,6 +26,17 @@ class DatabaseSeeder extends Seeder
                     "address" => "wertwqyui",
                     "password" => bcrypt("1234567890"),
                     "code" => 1234,
+                    "active" => 0,
+                ],
+                [
+                    "name" => "admin",
+                    "email" => "admin@admin.com",
+                    "type" => "super_admin",
+                    "phone" => "1234512783",
+                    "address" => "wertwqyui",
+                    "password" => bcrypt("1234567890"),
+                    'code' => 1111 ,
+                    "active" => 1,
                 ],
                 [
                     "name" => "employee",
@@ -35,6 +46,7 @@ class DatabaseSeeder extends Seeder
                     "address" => "wertwqyui",
                     "password" => bcrypt("1234567890"),
                     "code" => 1234,
+                    "active" => 1,
                 ],
                 [
                     "name" => "customer",
@@ -44,8 +56,9 @@ class DatabaseSeeder extends Seeder
                     "address" => "wertwqyui",
                     "password" => bcrypt("1234567890"),
                     "code" => 1234,
+                    "active" => 1,
                 ],
-                
+
             ]) ;
     }
 }

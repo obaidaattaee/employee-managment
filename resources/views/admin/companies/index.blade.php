@@ -22,24 +22,34 @@
                 <thead>
                 <tr>
                     <th>
-                         العنوان
+                        الاسم
+                    </th>
+                    <th>
+                        العنوان
                     </th>
                    <th>
-                        الوصف
+                        الكود
                    </th>
-                   <th>
-                        التفاصيل
-                   </th>
-                   <th>
-                        صورة
-                   </th>
+
                     <th>
-                         تعديل \ حذف
+                         الحالة
                     </th>
                 </tr>
                 </thead>
                 <tbody>
-                    
+                    @foreach ($companies as $company)
+                    {{-- {{dd($company)}} --}}
+                        <tr>
+                            <td>{{$company->name}}</td>
+                            <td>{{$company->address}}</td>
+                            <td>{{$company->code}}</td>
+                            
+                            <td>
+                                <a href="{{route('change.company.status' , ['user' => $company->id])}}" class="btn btn-{{$company->active == 1 ? "danger" : "success" }} btn-sm">{{ $company->active == 1 ? "تعطيل" : "تفعيل" }}</a>
+                            </td>
+
+                        </tr>
+                    @endforeach
                 </tbody>
                 </table>
             </div>

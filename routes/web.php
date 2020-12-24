@@ -32,7 +32,15 @@ Route::prefix('admin')->middleware(['auth' , 'super_admin' ])->namespace('\App\H
     Route::post('company/settings/update/{id}/{services}' , 'SettingsController@update')->name('company.settings.update');
 
     Route::get('admin/companies/index' , 'CompanyController@index')->name('admin.companies.index');
+    Route::get('admin/companies/profit' , 'CompanyController@profit')->name('admin.companies.profit');
+    Route::get('admin/companies/{user}/cangeStatus' , 'CompanyController@changeCompanyStatus')->name('change.company.status');
     Route::get('admin/companies/{company}' , 'CompanyController@index')->name('companies.index');
+
+    Route::get('admin/companies/yearly/reports' , 'CompanyController@yearlyReports')->name('admin.companies.yearly.reports');
+    Route::get('company/{user}/employees' , 'EmployeeController@index')->name('admin.company.employees') ;
+    Route::get('/employee/{user}/report' , 'EmployeeController@reports')->name('admin.company.employee.reports') ;
+    Route::get('/employee/{user}/report/{report}/show' , 'EmployeeController@show')->name('admin.company.employee.reports.show') ;
+
 });
 
 Route::prefix('company')->middleware('company' , 'auth')->namespace('App\Http\Controllers\Company')->group(function () {
