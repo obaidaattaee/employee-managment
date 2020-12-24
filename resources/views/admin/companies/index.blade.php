@@ -14,6 +14,7 @@
                     <i class="fa fa-globe"></i>  الشركات الفرعية
                 </div>
                 <div class="tools">
+                    <button id="print" onclick="event.preventDefault() ; print()" class="btn btn-success btn-sm">طباعة </button>
 
                 </div>
             </div>
@@ -43,7 +44,7 @@
                             <td>{{$company->name}}</td>
                             <td>{{$company->address}}</td>
                             <td>{{$company->code}}</td>
-                            
+
                             <td>
                                 <a href="{{route('change.company.status' , ['user' => $company->id])}}" class="btn btn-{{$company->active == 1 ? "danger" : "success" }} btn-sm">{{ $company->active == 1 ? "تعطيل" : "تفعيل" }}</a>
                             </td>

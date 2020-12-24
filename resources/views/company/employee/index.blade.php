@@ -12,7 +12,8 @@
                     <i class="fa fa-globe"></i> عرض الموظفين
                 </div>
                 <div class="tools">
-                    
+                    <button id="print" onclick="event.preventDefault() ; print()" class="btn btn-success btn-sm">طباعة </button>
+
                 </div>
             </div>
             <div class="portlet-body">
@@ -22,7 +23,7 @@
 
                     </div>
                 </div>
-                <table class="table table-striped table-bordered table-hover" id="myTable">
+                <table class="table table-striped table-bordered table-hover" id="example">
                 <thead>
                 <tr>
                     <th>

@@ -137,6 +137,11 @@ License: You must have a valid license purchased only from themeforest(the above
      Tasks.initDashboardWidget(); // init tash dashboard widget
     });
     </script>
+    <script>
+        function print(){
+            $('#example').printThis();
+        }
+    </script>
     <!-- END JAVASCRIPTS -->
 </body>
     <!-- END BODY -->

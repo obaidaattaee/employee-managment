@@ -112,9 +112,5 @@
     $('#example').DataTable();
 } );
 </script>
-<script>
-    function print(){
-        $('#example').printThis();
-    }
-</script>
+
 @endsection

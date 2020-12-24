@@ -14,6 +14,7 @@
                     <i class="fa fa-globe"></i>  التقرير السنوي للشركات
                 </div>
                 <div class="tools">
+                    <button id="print" onclick="event.preventDefault() ; print()" class="btn btn-success btn-sm">طباعة </button>
 
                 </div>
             </div>

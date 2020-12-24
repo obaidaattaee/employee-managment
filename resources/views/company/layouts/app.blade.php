@@ -130,6 +130,8 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="{{asset('assets/admin/layout4/scripts/demo.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/pages/scripts/index3.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/admin/pages/scripts/tasks.js')}}" type="text/javascript"></script>
+
+    <script src="{{asset('js/printThis.js')}}" type="text/javascript"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
     <script>
     jQuery(document).ready(function() {
@@ -140,6 +142,11 @@ License: You must have a valid license purchased only from themeforest(the above
         Index.init(); // init index page
      Tasks.initDashboardWidget(); // init tash dashboard widget
     });
+    </script>
+     <script>
+        function print(){
+            $('#example').printThis();
+        }
     </script>
     <!-- END JAVASCRIPTS -->
 </body>
