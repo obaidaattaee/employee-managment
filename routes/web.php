@@ -41,6 +41,64 @@ Route::prefix('admin')->middleware(['auth' , 'super_admin' ])->namespace('\App\H
     Route::get('/employee/{user}/report' , 'EmployeeController@reports')->name('admin.company.employee.reports') ;
     Route::get('/employee/{user}/report/{report}/show' , 'EmployeeController@show')->name('admin.company.employee.reports.show') ;
 
+
+
+
+
+
+Route::namespace('front')->group(function () {
+
+
+
+        Route::get("/slide",'SlideController@index')->name('slide');
+        Route::get("/slide/create","SlideController@create")->name('slides.create');
+        Route::post("/slide/create","SlideController@store")->name('slides.store');
+        Route::post("/slide","SlideController@show")->name('slides.show');
+        //    Route::get("/slide/destroy/{id}","SlideController@destroy")->name('slides.destroy');
+        Route::resource('slides','SlideController');
+
+        //edit view
+        Route::get("/slide/edit/{id}","SlideController@edit")->name('slides.edit');
+        //update data
+        Route::post("/slide/update/{id}","SlideController@update")->name('slides.update');
+
+        Route::resource('services','ServiceController');
+        Route::get("/service/edit/{id}","ServiceController@edit")->name('services.edit');
+        //update data
+        Route::post("/service/update/{id}","ServiceController@update")->name('services.update');
+        //about
+        Route::resource('abouts','AboutController');
+        Route::get("/about/edit/{id}","AboutController@edit")->name('abouts.edit');
+        //update data
+        Route::post("/about/update/{id}","AboutController@update")->name('abouts.update');
+        //team
+        Route::resource('teams','TeamController');
+        Route::get("/teams/edit/{id}","TeamController@edit")->name('teams.edit');
+        //update data
+        Route::post("/teams/update/{id}","TeamController@update")->name('teams.update');
+        //project
+        Route::resource('projects','ProjectController');
+        Route::get("/project/edit/{id}","ProjectController@edit")->name('projects.edit');
+        //update data
+        Route::post("/project/update/{id}","ProjectController@update")->name('projects.update');
+        //Package
+        Route::resource('packages','PackageController');
+        Route::get("/package/edit/{id}","PackageController@edit")->name('packages.edit');
+        //update data
+        Route::post("/package/update/{id}","PackageController@update")->name('packages.update');
+
+        //Package
+        Route::resource('missions','MissionController');
+        Route::get("/mission/edit/{id}","MissionController@edit")->name('missions.edit');
+        //update data
+        Route::post("/mission/update/{id}","MissionController@update")->name('missions.update');
+        //mmcompany
+        Route::resource('companys','MmcompanyController');
+        Route::get("/company/edit/{id}","MmcompanyController@edit")->name('companys.edit');
+        //update data
+        Route::post("/company/update/{id}","MmcompanyController@update")->name('companys.update');
+
+});
 });
 
 Route::prefix('company')->middleware('company' , 'auth')->namespace('App\Http\Controllers\Company')->group(function () {
@@ -77,3 +135,8 @@ Route::prefix('site')->namespace('App\Http\Controllers\User')->group(function(){
         Route::get('/' , 'UserController@index')->name('user.index') ;
     });
 });
+
+
+Route::get('test' , function (){
+    return view('frontend.slide.create');
+} );

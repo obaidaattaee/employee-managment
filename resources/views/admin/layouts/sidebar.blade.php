@@ -87,21 +87,38 @@
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="{{route('company.settings.index' , ['type' => 'services'])}}">
-                        الخدمات </a>
+                        <a href="{{route('companys.index')}}">
+                        بيانات الشركة </a>
                     </li>
                     <li>
-                        <a href="{{route('company.settings.index' , ['type' => 'slider'])}}">
+                        <a href="{{route('slide')}}">
                         السلايدر </a>
                     </li>
                     <li>
-                        <a href="{{route('company.settings.index' , ['type' => 'abouts'])}}">
-                        نبذة تعريفية </a>
+                        <a href="{{route('services.index')}}">
+                        خدمات الشركة </a>
                     </li>
                     <li>
-                        <a href="{{route('company.settings.index' , ['type' => 'projects'])}}">
-                        اعمالنا </a>
+                        <a href="{{route('abouts.index')}}">
+                        حول الشركة </a>
                     </li>
+                    <li>
+                        <a href="{{route('projects.index')}}">
+                        لنا مشروع  </a>
+                    </li>
+                    <li>
+                        <a href="{{route('teams.index')}}">
+                        فريقنا   </a>
+                    </li>
+                    <li>
+                        <a href="{{route('packages.index')}}">
+                        لنا تسعيرة   </a>
+                    </li>
+                    <li>
+                        <a href="{{route('missions.index')}}">
+                        تواصل معنا    </a>
+                    </li>
+
                 </ul>
             </li>
 
