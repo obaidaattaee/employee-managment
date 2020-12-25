@@ -30,6 +30,9 @@
     </div>
     <!-- FOOTER BLOCKES START -->
     <div class="footer-top overlay-wraper">
+        @php
+            $companys= App\Models\front\Mmcompany::get();
+        @endphp
         <div class="overlay-main"></div>
         <div class="container">
             <div class="row">
@@ -38,16 +41,15 @@
                     <div class="widget widget_about">
                         <!--<h4 class="widget-title">About Company</h4>-->
                         <div class="logo-footer clearfix p-b15">
-                            <a href="index.html"><img src="{{ asset('images/logo-light.png')}}" alt=""></a>
+                            <a href="index.html"><img src="images/logo-light.png" alt=""></a>
                         </div>
                         <p class="max-w400">اليوم يمكننا أن نخبرك ، بفضل شغفك وإبداعك في العمل الشاق وخبرتك ، لقد قدمت لنا أجمل إطلالات المنزل.</p>
 
                         <ul class="social-icons  mt-social-links">
-                            <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                            <li><a href="{{ $companys->first()->google ?? "" }}" class="fa fa-google"></a></li>
+                            <li><a href="{{ $companys->first()->instagram ?? "" }}" class="fa fa-rss"></a></li>
+                            <li><a href="{{ $companys->first()->face ?? "" }}" class="fa fa-facebook"></a></li>
+                            <li><a href="{{ $companys->first()->twitter ?? "" }}" class="fa fa-twitter"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -57,9 +59,9 @@
                     <div class="widget widget_address_outer">
                         <h4 class="widget-title">اتصل بنا</h4>
                         <ul class="widget_address">
-                            <li>{{ auth()->user()->company->address }}</li>
-                            <li>{{ auth()->user()->company->email }}</li>
-                            <li>{{ auth()->user()->company->phone }}</li>
+                            <li>{{ $companys->first()->address ?? "" }}</li>
+                            <li>{{ $companys->first()->email ?? "" }}</li>
+                            <li>{{ $companys->first()->phone ?? "" }}</li>
 
                         </ul>
 
@@ -73,7 +75,7 @@
                         <ul>
                             <li><a href="about-1.html">حول</a></li>
                             <li><a href="project-grid.html">المشاريع</a></li>
-                            <li><a href="blog-grid.html">الخدمات</a></li>
+                            <li><a href="blog-grid.html">مدونة</a></li>
                             <li><a href="contact-1.html">اتصل بنا</a></li>
                         </ul>
                     </div>

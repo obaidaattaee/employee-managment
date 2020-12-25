@@ -39,9 +39,6 @@ class LoginController extends Controller
         elseif(auth()->user()->type == 'employee'){
             return '/site/employee/report';
         }
-
-        return '/home';
-
     }
 
     protected $redirectTo = RouteServiceProvider::HOME;

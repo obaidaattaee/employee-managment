@@ -1,135 +1,1987 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Mirrored from 7xtheme.com/shapen-rtl/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Nov 2020 19:28:34 GMT -->
+<head>
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
+	<!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+    <meta name="description" content="" />
 
-        <style>
-            body {
-                font-family: 'Nunito';
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+    <!-- FAVICONS ICON -->
+    <link rel="icon" href="{{ asset('images/favicon.ico')}}" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png')}}" />
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                            <a href="{{ route('user.register') }}" class="ml-4 text-sm text-gray-700 underline">user.register</a>
-                            <a href="{{ route('customer.register') }}" class="ml-4 text-sm text-gray-700 underline">customer.register</a>
+    <!-- PAGE TITLE HERE -->
+    <title>Shapen Template | Home Page Style 2</title>
 
-                            @endif
-                    @endauth
-                </div>
-            @endif
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
+    <!-- [if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+	<![endif] -->
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
+    <!-- BOOTSTRAP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-rtl.min.css')}}">
+    <!-- FONTAWESOME STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome/css/font-awesome.min.css')}}" />
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+    <!-- OWL CAROUSEL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css')}}">
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
+    <!-- MAGNIFIC POPUP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/magnific-popup.min.css')}}">
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
+    <!-- LOADER STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/loader.min.css')}}">
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
+    <!-- FLATICON STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/flaticon.min.css')}}">
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
+    <!-- MAIN STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
+    <!-- RTL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/rtl.css')}}">
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
+    <!-- Color Theme Change Css -->
+    <link rel="stylesheet" class="skin" type="text/css" href="{{ asset('css/skin/skin-1.css')}}">
+
+    <!-- Side Switcher Css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/switcher.css')}}">
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/revolution/revolution/css/settings.css')}}">
+
+    <!-- REVOLUTION NAVIGATION STYLE -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('plugins/revolution/revolution/css/navigation.css')}}">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+
+
+	<div class="page-wraper">
+        <!-- HEADER START -->
+        <header class="site-header header-style-2">
+			<!-- Search Form -->
+            <div class="header-middle bg-white">
+                <div class="container">
+                    <div class="logo-header">
+                        <a href="index.html">
+                            <img src="images/logo-light.png" width="216" height="37" alt="" />
+                        </a>
                     </div>
-                </div>
+                    <div class="header-info">
+                        <ul>
+                        	<li>
+                                <div class="icon-sm">
+                                    <span class="icon-cell  text-primary"><i class="fa fa-map-marker"></i></span>
+                                </div>
+                                <div class="icon-content">
+                                    <strong>{{ $companys->first()->address ?? "الدار البيضاء اول لفة عالشمال" }}</strong>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+                                </div>
+                            </li>
+                            <li>
 
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
+                                <div class="icon-sm">
+                                    <span class="icon-cell  text-primary"><i class="fa fa-phone"></i></span>
+                                </div>
+                                <div class="icon-content">
+                                    <strong>{{$companys->first()->phone ?? "+324 123 45 978"}}</strong>
+                                    <span>الإثنين - الجمعة: 9.00 الساعة 18.00</span>
+                                </div>
 
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                            </li>
+                            <li class="btn-col-last">
+                                <a class="site-button-secondry btn-effect">اطلب اقتباس</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+
+			<!-- Search Form -->
+            <div class="sticky-header main-bar-wraper">
+                <div class="main-bar header-botton nav-bg-secondry">
+                    <div class="container">
+                        <!-- NAV Toggle Button -->
+                        <button data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggle collapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- ETRA Nav -->
+                        <div class="extra-nav">
+                            <div class="extra-cell">
+                                <a href="#search">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                            <div class="extra-cell">
+                                <a href="#" class="contact-slide-show"><i class="fa fa-angle-left arrow-animation"></i></a>
+                            </div>
+                        </div>
+                        <!-- ETRA Nav -->
+{{-- {{ dd($companys) }} --}}
+                        <!-- Contact Nav -->
+                        <div class="contact-slide-hide " style="background-image:url(images/background/bg-5.png)">
+                            <div class="contact-nav">
+                                 <a href="javascript:void(0)" class="contact_close">&times;</a>
+                                 <div class="contact-nav-form p-a30">
+                                    <div class="contact-info   m-b30">
+
+                                        <div class="mt-icon-box-wraper center p-b30">
+                                            <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-phone"></i></div>
+                                            <div class="icon-content">
+                                                <h5 class="m-t0 font-weight-500"> رقم الهاتف</h5>
+                                                <p>{{$companys->first()->phone ?? "(075) 123-7654" }}</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-icon-box-wraper center p-b30">
+                                            <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-envelope"></i></div>
+                                            <div class="icon-content">
+                                                <h5 class="m-t0 font-weight-500">عنوان بريد الكتروني</h5>
+                                                <p>{{$companys->first()->email ?? "7xthemehelp@gmail.com" }}</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="mt-icon-box-wraper center p-b30">
+                                            <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-map-marker"></i></div>
+                                            <div class="icon-content">
+                                                <h5 class="m-t0 font-weight-500">معلومات العنوان</h5>
+                                                <p>{{$companys->first()->email ?? "201 شارع ليفربول ، جناح 721 ، لندن" }} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="full-social-bg">
+                                          <ul>
+                                                <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                                <li><a href="#" class="google"><i class="fa fa-google"></i></a></li>
+                                                <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                                <li><a href="#" class="tumblr"><i class="fa fa-tumblr"></i></a></li>
+                                                <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                                <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                                          </ul>
+                                    </div>
+                                    <div class="text-center">
+                                        <h4 class="font-weight-600">&copy;  {{ date('Y') }}</h4>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                        <!-- SITE Search -->
+                        <div id="search">
+                                <span class="close"></span>
+                                <form role="search" id="searchform" action="http://7xtheme.com/search" method="get" class="radius-xl">
+                                    <div class="input-group">
+                                        <input value="" name="q" type="search" placeholder="اكتب للبحث"/>
+                                        <span class="input-group-btn"><button type="button" class="search-btn"><i class="fa fa-search arrow-animation"></i></button></span>
+                                    </div>
+                                </form>
+                            </div>
+
+                        <!-- MAIN Vav -->
+                        <div class="header-nav navbar-collapse collapse">
+                            <ul class=" nav navbar-nav">
+                                <li class="active">
+                                    <a href="javascript:;">الصفحة الرئيسية</a>
+                                 <ul class="sub-menu">
+
+                                        <li>
+                                            <a href="index.html">الصفحة الرئيسية -1</a>
+                                        </li>
+                                        <li>
+                                            <a href="index-2.html">الصفحة الرئيسية -2</a>
+                                        </li>
+                                        <li>
+                                            <a href="index-3.html">لصفحة الرئيسية  أسلوب محاصر  -3 </a>
+                                        </li>
+                                        <li>
+                                            <a href="index-4.html">الصفحة الرئيسية -4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="about-1.html">معلومات عنا</a>
+                                </li>
+                                <li>
+                                    <a href="services.html">خدمات</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">الصفحات</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="javascript:;">مدونة</a>
+                                            <ul class="sub-menu has-child">
+                                                <li><a href="blog-grid.html">شبكة المدونة</a></li>
+                                                <li><a href="blog-listing.html">قائمة المدونات</a></li>
+                                                <li><a href="blog-masonry.html">مدونة البناء</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="faq.html">التعليمات</a>
+                                        </li>
+                                        <li>
+                                            <a href="error-404.html">خطأ 404</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact-1.html">اتصل بنا</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">تفاصيل المشاركة</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="post-image.html">نشر الصورة</a></li>
+                                        <li><a href="post-gallery.html">معرض البريد</a></li>
+                                        <li><a href="post-video.html">انشر الفيديو</a></li>
+                                        <li><a href="post-right-sidebar.html">نشر الشريط الجانبي الأيمن</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:;">المشاريع</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="project-grid.html">شبكة المشروع</a></li>
+                                        <li><a href="project-masonry.html">مشروع الماسونية</a></li>
+                                        <li><a href="project-carousel.html">مشروع كاروسيل</a></li>
+                                        <li><a href="project-classic.html">مشروع كلاسيكي -1</a></li>
+                                        <li><a href="project-classic2.html">مشروع كلاسيكي -2</a></li>
+                                        <li><a href="project-detail.html">تفاصيل المشروع</a></li>
+                                    </ul>
+                                </li>
+                                <li class="submenu-direction">
+                                    <a href="javascript:;">تسجيل الدخول </a>
+                                    <ul class="sub-menu">
+                                        @guest
+                                        <li><a href="{{ route('login') }}">تسجيل الدخول</a></li>
+
+                                        @endguest
+                                        @auth
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                      document.getElementById('logout-form').submit();">
+                                         {{ __('Logout') }}
+                                     </a>
+
+                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                         @csrf
+                                     </form>
+
+                                        @endauth
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!-- HEADER END -->
+
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+
+            <!-- SLIDER START -->
+            <div id="welcome_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="goodnews-header" dir="ltr">
+                <div id="rev_slider_one" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.3.1">
+                    <ul>
+                        <!-- SLIDE 1 -->
+                        {{-- @if (count($slides) > 0)
+                        @foreach ($slides as $item)
+
+                        @endforeach
+
+
+                        @endif --}}
+
+                        <li data-index="rs-901"
+                        data-transition="fade"
+                        data-slotamount="default"
+                        data-hideafterloop="0"
+                        data-hideslideonmobile="off"
+                        data-easein="default"
+                        data-easeout="default"
+                        data-masterspeed="default"
+                        data-thumb="images/main-slider/slider2/slide1.jpg"
+                        data-rotate="0"
+                        data-fstransition="fade"
+                        data-fsmasterspeed="300"
+                        data-fsslotamount="7"
+                        data-saveperformance="off"
+                        data-title=""
+                        data-param1=""
+                        data-param2=""
+                        data-param3=""
+                        data-param4=""
+                        data-param5=""
+                        data-param6=""
+                        data-param7=""
+                        data-param8=""
+                        data-param9=""
+                        data-param10=""
+                        data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/main-slider/slider2/slide1.jpg" alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""/>
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 1 [ for overlay ] -->
+                            <div class="tp-caption tp-shape tp-shapewrapper "
+                            id="slide-901-layer-0"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                            data-width="full"
+                            data-height="full"
+                            data-whitespace="nowrap"
+                            data-type="shape"
+                            data-basealign="slide"
+                            data-responsive_offset="off"
+                            data-responsive="off"
+                            data-frames='[
+                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
+                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
+                            ]'
+                            data-textAlign="['left','left','left','left']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index: 1;background-color:rgba(0, 0, 0, 0.0);border-color:rgba(0, 0, 0, 0);border-width:0px;">
+                            </div>
+
+
+
+
+                            <!-- LAYER NR. 4 [ for title ] -->
+                            <div class="tp-caption   tp-resizeme"
+                            id="slide-901-layer-2"
+                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
+                            data-y="['top','top','top','top']" data-voffset="['200','200','140','160']"
+                            data-fontsize="['72','72','62','52']"
+                            data-lineheight="['82','82','72','62']"
+                            data-width="['700','700','700','96%']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                           data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[5,5,5,5]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index: 13;
+                            white-space: normal;
+                            font-weight: 700;
+                            color:#111;
+                            border-width:0px;font-family: 'Poppins', sans-serif; text-transform:uppercase ;">
+                            <div>نحن نبني حلمك</div>
+
+                            </div>
+
+                            <!-- LAYER NR. 5 [ for block] -->
+
+
+
+
+                            <!-- LAYER NR. 5 [ for block] -->
+                            <div class="tp-caption   tp-resizeme"
+                            id="slide-901-layer-4"
+                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
+                            data-y="['top','top','top','top']" data-voffset="['310','310','260','260']"
+                            data-fontsize="['20','20','38','28']"
+                            data-lineheight="['28','28','48','38']"
+                            data-width="['600','600','700','600']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[5,5,5,5]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index: 13;
+                            white-space: normal;
+                            font-weight: 500;
+                            color:#111;
+                             border-width:0px;font-family: 'Poppins', sans-serif;">
+                            من الحقائق الثابتة أن المحتوى الذي يمكن قراءته سيشتت انتباه القارئ.
+
+                            </div>
+
+                            <!-- LAYER NR. 5 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme"
+                            id="slide-901-layer-5"
+                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
+
+                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
+                            data-lineheight="['none','none','none','none']"
+                            data-width="['300','300','300','300']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index:100; text-transform:uppercase; margin:10px">
+                            <a href="javascript:;" class="site-button-secondry btn-effect">المزيد عن</a>
+                            </div>
+
+
+                            <!-- LAYER NR. 6 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme"
+                            id="slide-901-layer-6"
+                            data-x="['right','right','right','right']" data-hoffset="['260','330','330','330']"
+
+                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
+                            data-lineheight="['none','none','none','none']"
+                            data-width="['300','300','300','300']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index:100; text-transform:uppercase; margin:10px">
+                            <a href="javascript:;" class="site-button btn-effect">اتصل بنا</a>
+                            </div>
+                        </li>
+
+
+                        <!-- SLIDE 2 -->
+                       <li data-index="rs-902"
+                        data-transition="fade"
+                        data-slotamount="default"
+                        data-hideafterloop="0"
+                        data-hideslideonmobile="off"
+                        data-easein="default"
+                        data-easeout="default"
+                        data-masterspeed="default"
+                        data-thumb="images/main-slider/slider2/slide2.jpg"
+                        data-rotate="0"
+                        data-fstransition="fade"
+                        data-fsmasterspeed="300"
+                        data-fsslotamount="7"
+                        data-saveperformance="off"
+                        data-title=""
+                        data-param1=""
+                        data-param2=""
+                        data-param3=""
+                        data-param4=""
+                        data-param5=""
+                        data-param6=""
+                        data-param7=""
+                        data-param8=""
+                        data-param9=""
+                        data-param10=""
+                        data-description="">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/main-slider/slider2/slide2.jpg" alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="">
+                            <!-- LAYERS -->
+                            <!-- LAYER NR. 1 [ for overlay ] -->
+                            <div class="tp-caption tp-shape tp-shapewrapper "
+                            id="slide-902-layer-0"
+                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                            data-width="full"
+                            data-height="full"
+                            data-whitespace="nowrap"
+                            data-type="shape"
+                            data-basealign="slide"
+                            data-responsive_offset="off"
+                            data-responsive="off"
+                            data-frames='[
+                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
+                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
+                            ]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index: 1;background-color:rgba(0, 0, 0, 0.0);border-color:rgba(0, 0, 0, 0);border-width:0px;">
+                            </div>
+
+
+
+
+                            <!-- LAYER NR. 4 [ for title ] -->
+                            <div class="tp-caption   tp-resizeme"
+                            id="slide-902-layer-2"
+                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
+                            data-y="['top','top','top','top']" data-voffset="['200','200','140','160']"
+                            data-fontsize="['72','72','62','52']"
+                            data-lineheight="['82','82','72','62']"
+                            data-width="['700','700','700','96%']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                           data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[5,5,5,5]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index: 13;
+                            white-space: normal;
+                            font-weight: 700;
+                            color:#111;
+                            border-width:0px;font-family: 'Poppins', sans-serif; text-transform:uppercase ;">
+                            <div>من المفهوم إلى الخلق.</div>
+
+                            </div>
+
+                            <!-- LAYER NR. 5 [ for block] -->
+
+
+
+
+                            <!-- LAYER NR. 5 [ for block] -->
+                            <div class="tp-caption   tp-resizeme"
+                            id="slide-902-layer-4"
+                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
+                            data-y="['top','top','top','top']" data-voffset="['310','310','260','300']"
+                            data-fontsize="['20','20','38','28']"
+                            data-lineheight="['28','28','48','38']"
+                            data-width="['600','600','700','600']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[5,5,5,5]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index: 13;
+                            white-space: normal;
+                            font-weight: 500;
+                            color:#111;
+                             border-width:0px;font-family: 'Poppins', sans-serif;">
+                            من الحقائق الثابتة أن المحتوى الذي يمكن قراءته سيشتت انتباه القارئ.
+
+                            </div>
+
+                            <!-- LAYER NR. 6 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme"
+                            id="slide-902-layer-5"
+                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
+
+                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
+                            data-lineheight="['none','none','none','none']"
+                            data-width="['300','300','300','300']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index:100; text-transform:uppercase;margin:10px">
+                            <a href="javascript:;" class="site-button-secondry btn-effect ">المزيد عن</a>
+                            </div>
+
+                            <!-- LAYER NR. 6 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme"
+                            id="slide-902-layer-6"
+                            data-x="['right','right','right','right']" data-hoffset="['260','330','330','330']"
+
+                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
+                            data-lineheight="['none','none','none','none']"
+                            data-width="['300','300','300','300']"
+                            data-height="['none','none','none','none']"
+                            data-whitespace="['normal','normal','normal','normal']"
+
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['right','right','right','right']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[0,0,0,0]"
+
+                            style="z-index:100; text-transform:uppercase; margin:10px">
+                            <a href="javascript:;" class="site-button btn-effect">اتصل بنا</a>
+                            </div>
+
+                        </li>
+
+                        <!-- SLIDE 2 -->
+
+                    </ul>
+                    <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+                </div>
+            </div>
+            <!-- SLIDER END -->
+            @if (count($services) > 0)
+
+                <!-- OUR SPECIALLIZATION START -->
+                <div class="section-full bg-white slider-half-part">
+                    <div class="container">
+                        <!-- IMAGE CAROUSEL START -->
+                        <div class="section-content">
+                            <div class="row">
+                                    @foreach ($services as $item)
+                                    <div class="col-md-4 col-sm-4 m-b30">
+                                        <div class="half-blocks">
+                                            <div class="mt-icon-box-wraper center m-b30">
+                                                <div class="half-block-content icon-count-2 p-a30 p-tb50">
+                                                    <span class="icon-count-number">1</span>
+                                                    <div class="mt-icon-box-lg radius bg-gray m-b20 scale-in-center">
+                                                        <span class="icon-cell"><img src="images/icon/compass.png" alt=""></span>
+                                                    </div>
+                                                    <div class="icon-content">
+                                                        <h4 class="mt-tilte m-b25">{{$item->title}}</h4>
+                                                        <p>{{$item->summary}}</p>
+                                                        <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="bg-cover  half-blocks-bg" style="background-image:url(images/services/1.jpg)"></div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    @endforeach
+
+                                {{-- <div class="col-md-4 col-sm-4 m-b30">
+                                    <div class="half-blocks">
+                                        <div class="mt-icon-box-wraper center m-b30">
+                                            <div class="half-block-content icon-count-2 bg-gray p-a30 p-tb50">
+                                                <span class="icon-count-number">2</span>
+                                                <div class="mt-icon-box-lg radius bg-gray m-b20 scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/crane-1.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">بناء اعمال بناء</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="bg-cover  half-blocks-bg" style="background-image:url(images/services/3.jpg)"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 m-b0">
+                                    <div class="half-blocks">
+                                    <div class="mt-icon-box-wraper center m-b30">
+                                        <div class="half-block-content icon-count-2 bg-gray p-a30 p-tb50">
+                                            <span class="icon-count-number">3</span>
+                                            <div class="mt-icon-box-lg radius bg-gray m-b20 scale-in-center">
+                                                <span class="icon-cell"><img src="images/icon/renovation.png" alt=""></span>
+                                            </div>
+                                            <div class="icon-content">
+                                                <h4 class="mt-tilte m-b25">بناء تجديد</h4>
+                                                <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="bg-cover  half-blocks-bg" style="background-image:url(images/services/2.jpg)"></div>
+                                    </div>
+                                    </div>
+                                </div> --}}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- OUR SPECIALLIZATION END -->
+            @endif
+
+
+            @if (count($abouts) > 0)
+
+                <!-- ABOUT COMPANY START -->
+                    <div class="section-full " style="background-image:url(images/background/bg-map.png)">
+                        <div class="services-half-section-top " >
+                            <div class="container">
+                                <!-- TITLE START -->
+                                <div class="section-head">
+                                    <div class="mt-separator-outer separator-left text-wh">
+                                        <div class="mt-separator">
+                                            <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 text-primary">حول</span> شركة</h2>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- TITLE END -->
+
+                                    <div class="section-content">
+                                        <div class="row">
+                                            <div class="col-lg-8 col-md-12 col-sm-12">
+                                                <div class="owl-carousel about-home about-home-v2 owl-dots-bottom-left">
+                                                    <!-- COLUMNS 1 -->
+                                                        @foreach ($abouts as $item)
+                                                        <div class="item ">
+                                                            <div class="mt-img-effect zoom-slow">
+                                                                <a href="javascript:void(0);"><img src="{{ asset('uploads/public/'.$item->image) }}" style="max-height: 400px" alt=""></a>
+                                                        </div>
+                                                        </div>
+                                                        @endforeach
+
+                                                    <!-- COLUMNS 2 -->
+                                                    {{-- <div class="item ">
+                                                        <div class="mt-img-effect zoom-slow">
+                                                            <a href="javascript:void(0);"><img src="images/gallery/pic6.jpg" alt=""></a>
+                                                    </div>
+                                                    </div> --}}
+                                                    {{-- <!-- COLUMNS 3 -->
+                                                    <div class="item ">
+                                                        <div class="mt-img-effect zoom-slow">
+                                                            <a href="javascript:void(0);"><img src="images/gallery/pic9.jpg" alt=""></a>
+                                                    </div>
+                                                    </div>
+                                                    <!-- COLUMNS 4 -->
+                                                    <div class="item ">
+                                                        <div class="mt-img-effect zoom-slow">
+                                                            <a href="javascript:void(0);"><img src="images/gallery/pic2.jpg" alt=""></a>
+                                                    </div>
+                                                    </div>
+                                                    <!-- COLUMNS 5 -->
+                                                    <div class="item ">
+                                                        <div class="mt-img-effect zoom-slow">
+                                                            <a href="javascript:void(0);"><img src="images/gallery/pic3.jpg" alt=""></a>
+                                                    </div>
+                                                    </div> --}}
+                                            </div>
+                                            </div>
+
+                                            <div class="col-lg-4 col-md-12 col-sm-12">
+                                                <div class="about-home-right about-right-v2 bg-primary text-black p-a30">
+                                                    <h3 class="m-t0"><span class="font-weight-100">ملتزم</span>لجودة ونتائج عالية.</h3>
+                                                    <p><strong>خلافا للاعتقاد الشائع ، لوريم إيبسوم ليس كذلك
+                                                            ببساطة نص. لها جذور في قطعة
+                                                            الأدب اللاتيني الكلاسيكي من 45 قبل الميلاد ، مما يجعله
+                                                            أكثر من 2000 سنة.</strong></p>
+
+                                                    <div class="text-left">
+                                                        <a href="#" class="site-button-secondry btn-effect">اقرأ أكثر</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="services-half-section-bottom p-t80 p-b50  bg-secondry bg-cover bg-center bg-no-repeat" style="background-image:url(images/background/bg5.jpg)">
+                            <div class="container">
+                                <div class="section-content">
+                                    <div class="row">
+
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="text-primary mt-icon-box-wraper left m-b30">
+                                                <span class="icon-md p-t10">
+                                                    <i class="flaticon-city"></i>
+                                                </span>
+                                                <div class="icon-content text-white">
+                                                    <div class="counter font-50 font-weight-800 m-b5">2500</div>
+                                                    <span class="font-16">المشاريع المنجزة</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="text-primary mt-icon-box-wraper left m-b30">
+                                                <span class="icon-md p-t10">
+                                                    <i class="flaticon-worker"></i>
+                                                </span>
+                                                <div class="icon-content text-white">
+                                                    <div class="counter font-50 font-weight-800 m-b5">1500</div>
+                                                    <span class="font-16">عميل سعيد</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="text-primary mt-icon-box-wraper left m-b30">
+                                                <span class="icon-md p-t10">
+                                                    <i class="flaticon-crane"></i>
+                                                </span>
+                                                <div class="icon-content text-white">
+                                                    <div class="counter font-50 font-weight-800 m-b5">840</div>
+                                                    <span class="font-16">خدم الصناعات</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="text-primary mt-icon-box-wraper left m-b0">
+                                                <span class="icon-md p-t10">
+                                                    <i class="flaticon-art-and-design"></i>
+                                                </span>
+                                                <div class="icon-content text-white">
+                                                    <div class="counter font-50 font-weight-800 m-b5">180</div>
+                                                    <span class="font-16">ترميم</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <!-- ABOUT COMPANY END -->
+            @endif
+
+            <!-- OUR VALUE START -->
+            <div class="section-full p-t80 p-b50 bg-white mobile-page-padding">
+                <div class="container">
+
+						<div class="section-content">
+                        	<div class="row">
+                                <div class="col-md-7 col-sm-6">
+                                	<div class="video-section-full-v2">
+                                        <div class="video-section-full bg-no-repeat bg-cover overlay-wraper m-b30" style="background-image:url(images/video-bg2.jpg)">
+                                            <div class="overlay-main bg-black opacity-04"></div>
+                                            <div class="video-section-inner">
+                                                <div class="video-section-content">
+                                                <div class="video-section-left">
+                                                     <a href="https://player.vimeo.com/video/34741214?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" class="mfp-video play-now">
+                                                        <i class="icon fa fa-play"></i>
+                                                        <span class="ripple"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="video-section-right">
+                                                    <a href="https://player.vimeo.com/video/34741214?color=ffffff&amp;title=0&amp;byline=0&amp;portrait=0" class="mfp-video font-weight-600 text-uppercase">عرض فيديو</a>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            	<div class="col-md-5 col-sm-6">
+                                    <!-- TITLE START -->
+                                    <div class="video-part-2">
+                                            <h3><span class="font-weight-100">سوف نزود</span> أنت أفضل عمل حلمت به!</h3>
+     										<p>من الحقائق الثابتة أن القارئ سيشتت انتباهه من خلال المحتوى المقروء للصفحة عند النظر في تصميمها. هناك العديد من الأشكال المختلفة للمقاطع مثل المتاحة</p>
+                                            <ul class="list-angle-right anchor-line">
+                                                <li><a href="#">اعمال بناء الإدارة</a></li>
+                                                <li><a href="#">قبل اعمال بناء الخدمات</a></li>
+                                                <li><a href="#">إدارة العقود</a></li>
+                                            </ul>
+                                    </div>
+                                    <!-- TITLE END -->
+                                    <div class="author-info author-info-v2 p-t20">
+
+                                        <div class="author-signature">
+                                            <img src="images/Signature%2bBlack.png" alt="Signature" width="150">
+                                        </div>
+                                        <div class="author-name">
+                                            <h4 class="m-t0">ديفيد هوكر</h4>
+                                            <p>العمارة والمؤسس</p>
+                                        </div>
+                                    </div>
+
+
+                           		</div>
+                    		</div>
+                       </div>
+                 </div>
+            </div>
+            <!-- OUR VALUE END -->
+
+                <!-- OUR MISSION START -->
+                <div class="section-full bg-dark ">
+                    <div class="section-content">
+                        <div class="container get-in-touch-form">
+
+                            <div class="row">
+
+
+
+                                <div class="col-md-6 col-sm-12">
+                                    <div class="contact-home1-left contact-home1-left-v2 bg-dark p-a30 m-b30 p-t50">
+                                        <h3 class="text-white m-t0"><span class="font-weight-100">أدخل</span> لمس. اتصال. صلة</h3>
+                                        <form class="cons-contact-form2 form-transparent" method="post" action="http://7xtheme.com/shapen-rtl/form-handler2.php">
+
+                                            <div class="input input-animate">
+                                                <label for="name">اسم</label>
+                                                <input type="text" name="username"  id="name" required>
+                                                <span class="spin"></span>
+                                            </div>
+
+                                            <div class="input input-animate">
+                                                <label for="email">البريد الإلكتروني</label>
+                                                <input type="email" name="email"   id="email" required>
+                                                <span class="spin"></span>
+                                            </div>
+
+                                            <div class="input input-animate">
+                                                <label for="Phone">هاتف</label>
+                                                <input type="text" name="phone"  id="Phone" required>
+                                                <span class="spin"></span>
+                                            </div>
+
+                                            <div class="input input-animate">
+                                                <label for="message">منطقة النص</label>
+                                                <textarea name="message"  id="message" required></textarea>
+                                                <span class="spin"></span>
+                                            </div>
+
+                                            <div class="text-left p-t10">
+                                                <button type="submit" class="site-button btn-effect ">
+                                                أرسل الآن
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                                <div class="get-in-touch-form-section">
+                                    <div class="get-in-touch-form-section-img"><img src="images/s-pic-1.png" alt=""></div>
+                                    <div class="get-in-touch-info arrow-animation">
+                                        <div class="mt-icon-box-wraper  p-a20 left bg-white hover-shadow">
+                                            <div class="icon-md m-b20 scale-in-center">
+                                                <span class="icon-cell text-secondry"><img src="images/icon/icon-img-01.png" alt=""></span>
+                                            </div>
+                                            <div class="icon-content">
+                                                <h4 class="mt-tilte m-b0">تجربة رائعة لبناء البناء والتجديد</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- OUR MISSION  END -->
+            @if (count($services) > 0 )
+                <!-- OUR SERVICES START -->
+                <div class="section-full p-t80 p-b50 bg-white mobile-page-padding" style="background-image:url(images/background/ptn-1.png)">
+                    <div class="section-content">
+
+                            <div class="container">
+                                <!-- TITLE START -->
+                                <div class="section-head m-b50">
+                                    <div class="mt-separator-outer separator-left">
+                                        <div class="mt-separator">
+                                            <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 text-primary">لنا</span> خدمات</h2>
+                                        </div>
+                                    </div>
+                                    <h3>هناك العديد من الاختلافات في مقاطع لوريم إيبسوم المتاحة ، لكن الغالبية عانت من التغيير</h3>
+                                </div>
+                                <!-- TITLE END -->
+
+                                <div class="row services-v2 no-col-gap">
+
+                                    @foreach ($services as $item)
+
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative  p-a30">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/crane-1.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">{{ $item->title }}</h4>
+                                                    <p>{{ $item->summary }}</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    @endforeach
+
+                                    {{-- <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative  p-a30">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/crane-1.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">بناء <br>اعمال بناء</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative   p-a30 ">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/renovation.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">بناء <br>تجديد</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative p-a30 ">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/toolbox.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">بناء <br>اعمال صيانة</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative   p-a30 ">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/compass.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">هندسة معمارية<br>التصميم</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative   p-a30 ">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/idea.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">اعمال بناء <br> استشاري</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative  p-a30 ">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/dump-truck.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">مواد <br> يتبرع</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative  p-a30">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/architecture.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">منزل <br> تجديد</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc">
+
+                                        <div class="mt-icon-box-wraper bdr-l-1 bdr-solid bdr-gray">
+                                            <div class="relative p-a30 ">
+
+                                                <div class="icon-md inline-icon m-b15 text-primary scale-in-center">
+                                                    <span class="icon-cell"><img src="images/icon/planning.png" alt=""></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <h4 class="mt-tilte m-b25">الداخلية <br>التصميم</h4>
+                                                    <p>أداة البناء متاحة ، لكن الغالبية عانت من تغيير في شكل ما ، عن طريق الصدفة.</p>
+                                                    <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div> --}}
+
+                                </div>
+
+                            </div>
+                    </div>
+
+                </div>
+                <!-- OUR SERVICES  END -->
+            @endif
+            <!-- CALL US SECTION START -->
+            <div class="section-full p-tb80 overlay-wraper bg-center bg-parallax bg-cover"  data-stellar-background-ratio="0.5" style="background-image:url(images/background/bg-10.jpg)">
+            	<div class="overlay-main bg-black opacity-07"></div>
+                <div class="container">
+
+						<div class="section-content">
+							<div class="call-us-section text-center text-white">
+								<h4 class="m-b15">فلنعمل معًا</h4>
+                                <h2 class="call-us-number m-b15 m-b0">{{ $companys->first()->phone ?? "(+291)-456-789-1234" }}</h2>
+                                <h4 class="call-us-address m-t0 m-b20">{{ $companys->first()->address ?? "شارع 4 ، 45 مدينة نيويورك" }}</h4>
+                                <a href="#" class="site-button btn-effect">اتصل بنا</a>
+							</div>
+						</div>
+
+                </div>
+            </div>
+            <!-- CALL US SECTION END -->
+            @if (count($projects) > 0)
+                <div class="section-full p-t80 p-b30 square_shape2 mobile-page-padding" >
+                    <div class="container">
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="mt-separator-outer separator-center">
+                                <div class="mt-separator">
+                                    <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 text-primary">لنا</span> مشروع</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TITLE END -->
+                            <div class="section-content">
+
+                                <div class="filter-wrap text-center">
+                                    <ul class="filter-navigation inline-navigation masonry-filter link-style  text-uppercase">
+                                        <li class="active"><a data-filter="*" href="#" data-hover="الكل">الكل</a></li>
+
+                                        @foreach ($projects as $item)
+                                        <li><a data-filter=".cat-{{ $item->service()->first()->id }}" href="#" data-hover="{{ $item->service()->first()->title }}"> {{ $item->service()->first()->title }}</a></li>
+
+                                        @endforeach
+                                        {{-- <li><a data-filter=".cat-1" href="#" data-hover="اعمال بناء">اعمال بناء</a></li>
+                                        <li><a data-filter=".cat-2" href="#" data-hover="تجديد">تجديد</a></li>
+                                        <li><a data-filter=".cat-3" href="#" data-hover="في الخارج">في الخارج</a></li>
+                                        <li><a data-filter=".cat-4" href="#" data-hover="الداخلية">الداخلية </a></li>
+                                        <li><a data-filter=".cat-5" href="#" data-hover="مستشار">مستشار</a></li> --}}
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="section-content">
+
+                                <div class="portfolio-wrap row mfp-gallery product-stamp clearfix">
+                                    <!-- COLUMNS 1 -->
+                                    @foreach ($projects as $item)
+                                    <div class="masonry-item  cat-{{$item->service()->first()->id}} col-md-4 col-sm-6 m-b30">
+                                        <div class="image-effect-one hover-shadow">
+                                            <img src="images/projects/square/pic4.jpg" alt="" />
+                                            <div class="figcaption">
+                                                <h4>{{$item->title}}</h4>
+                                                <p>{{ $item->service()->first()->title }}</p>
+                                                <a href="#"><i class="link-plus bg-primary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                    {{-- <div class="masonry-item  cat-1 col-md-4 col-sm-6 m-b30">
+                                        <div class="image-effect-one hover-shadow">
+                                            <img src="images/projects/square/pic4.jpg" alt="" />
+                                            <div class="figcaption">
+                                                <h4>2 طوابق البيت</h4>
+                                                <p>البناء والداخلية</p>
+                                                <a href="#"><i class="link-plus bg-primary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 2 -->
+                                    <div class="masonry-item  cat-2 col-md-4 col-sm-6 m-b30">
+                                        <div class="image-effect-one hover-shadow">
+                                            <img src="images/projects/square/pic2.jpg" alt="" />
+                                            <div class="figcaption">
+                                                <h4>مباني المدينة</h4>
+                                                <p>المباني والهندسة</p>
+                                                <a href="#"><i class="link-plus bg-primary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 3 -->
+                                    <div class="masonry-item  cat-3 col-md-4 col-sm-6 m-b30">
+                                        <div class="image-effect-one hover-shadow">
+                                            <img src="images/projects/square/pic3.jpg" alt="" />
+                                            <div class="figcaption">
+                                                <h4>غرفة المعيشة</h4>
+                                                <p>العقبة ، الأردن</p>
+                                                <a href="#"><i class="link-plus bg-primary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 4 -->
+                                    <div class="masonry-item  cat-4 col-md-4 col-sm-6 m-b30">
+                                        <div class="image-effect-one hover-shadow">
+                                            <img src="images/projects/square/pic5.jpg" alt="" />
+                                            <div class="figcaption">
+                                                <h4>هندسة الجسر</h4>
+                                                <p>التصميم والبناء</p>
+                                                <a href="#"><i class="link-plus bg-primary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 5 -->
+                                    <div class="masonry-item  cat-5 col-md-4 col-sm-6 m-b30">
+                                        <div class="image-effect-one hover-shadow">
+                                            <img src="images/projects/square/pic7.jpg" alt="" />
+                                            <div class="figcaption">
+                                                <h4>فوجيات نولا</h4>
+                                                <p>الهندسة والداخلية</p>
+                                                <a href="#"><i class="link-plus bg-primary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- COLUMNS 6 -->
+                                    <div class="masonry-item  cat-4 col-md-4 col-sm-6 m-b30">
+                                        <div class="image-effect-one hover-shadow">
+                                            <img src="images/projects/square/pic6.jpg" alt="" />
+                                            <div class="figcaption">
+                                                <h4>كامبردج شكاك</h4>
+                                                <p>اعمال بناء</p>
+                                                <a href="#"><i class="link-plus bg-primary"></i></a>
+                                            </div>
+                                        </div>
+                                    </div> --}}
+
+                                </div>
+
+                            </div>
+
+                    </div>
+
+                </div>
+                <!-- OUR PROJECT START -->
+            @endif
+
+
+            @if (count($teams) > 0)
+
+
+                <!-- OUR Team START -->
+                    <div class="section-full p-t80 p-b50 square_shape1 bg-parallax bg-cover "  data-stellar-background-ratio="0.5" style="background-image:url(images/background/bg5.jpg);">
+                        <div class="container">
+
+                            <!-- TITLE START -->
+                            <div class="section-head text-center text-white ">
+                                <div class="mt-separator-outer separator-center">
+                                    <div class="mt-separator">
+                                        <h2 class="text-white text-uppercase sep-line-one "><span class="font-weight-300 text-primary" >لنا </span> الفريق</h2>
+                                    </div>
+                                </div>
+                                <h2>اكتشف فريق الثقة وخبرائنا</h2>
+                            </div>
+                            <!-- TITLE END -->
+
+                            <!-- IMAGE CAROUSEL START -->
+                            <div class="section-content">
+                                <div class="row">
+                                    @foreach ($teams as $item)
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc m-b30   ">
+                                        <div class="our-team-2 ">
+                                          <div class="profile-image scale-in-center"><img src="{{ asset('uploads/public/' . $item->image) }}" alt="" /></div>
+                                         	 <div class="figcaption text-black">
+                                                 <h4>{{ $item->name }}</h4>
+                                                 <h5>{{ $item->job }}</h5>
+
+                                                 <div class="icons">
+                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                    <a href="#"> <i class="fa fa-twitter"></i></a>
+                                                    <a href="#"> <i class="fa fa-instagram"></i></a>
+                                                    <a href="#"><i class="fa fa-rss"></i></a>
+                                                    <a href="#"> <i class="fa fa-youtube"></i></a>
+                                                    <a href="#"> <i class="fa fa-linkedin"></i></a>
+                                                </div>
+                                              </div>
+                                          </div>
+                                    </div>
+                                    @endforeach
+                                    {{-- <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc m-b30   ">
+                                        <div class="our-team-2 ">
+                                          <div class="profile-image scale-in-center"><img src="images/our-team5/pic4.png" alt="" /></div>
+                                         	 <div class="figcaption text-black">
+                                                 <h4>آفي بيتون </h4>
+                                                 <h5>الرئيس التنفيذي والمعماري</h5>
+
+                                                 <div class="icons">
+                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                    <a href="#"> <i class="fa fa-twitter"></i></a>
+                                                    <a href="#"> <i class="fa fa-instagram"></i></a>
+                                                    <a href="#"><i class="fa fa-rss"></i></a>
+                                                    <a href="#"> <i class="fa fa-youtube"></i></a>
+                                                    <a href="#"> <i class="fa fa-linkedin"></i></a>
+                                                </div>
+                                              </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc m-b30   ">
+                                        <div class="our-team-2 ">
+                                          <div class="profile-image scale-in-center"><img src="images/our-team5/pic3.png" alt="" /></div>
+                                          	<div class="figcaption text-black">
+                                              <h4>بن جونسون </h4>
+                                              <h5>مهندس معماري </h5>
+
+                                            <div class="icons">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <a href="#"> <i class="fa fa-twitter"></i></a>
+                                                <a href="#"> <i class="fa fa-instagram"></i></a>
+                                                <a href="#"><i class="fa fa-rss"></i></a>
+                                                <a href="#"> <i class="fa fa-youtube"></i></a>
+                                                <a href="#"> <i class="fa fa-linkedin"></i></a>
+                                            </div>
+                                          </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc m-b30   ">
+                                        <div class="our-team-2 ">
+                                          <div class="profile-image scale-in-center"><img src="images/our-team5/pic2.png" alt="" /></div>
+                                              <div class="figcaption text-black">
+                                                  <h4>اشلي فليتشر </h4>
+                                                  <h5>المالية</h5>
+
+                                                  <div class="icons">
+                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                    <a href="#"> <i class="fa fa-twitter"></i></a>
+                                                    <a href="#"> <i class="fa fa-instagram"></i></a>
+                                                    <a href="#"><i class="fa fa-rss"></i></a>
+                                                    <a href="#"> <i class="fa fa-youtube"></i></a>
+                                                    <a href="#"> <i class="fa fa-linkedin"></i></a>
+                                                  </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-6 col-xs-100pc m-b30   ">
+                                        <div class="our-team-2">
+                                          <div class="profile-image scale-in-center"><img src="images/our-team5/pic5.png" alt="" /></div>
+                                              <div class="figcaption text-black">
+                                                  <h4>اشلي فليتشر </h4>
+                                                  <h5>المالية</h5>
+                                                  <div class="icons">
+                                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                                    <a href="#"> <i class="fa fa-twitter"></i></a>
+                                                    <a href="#"> <i class="fa fa-instagram"></i></a>
+                                                    <a href="#"><i class="fa fa-rss"></i></a>
+                                                    <a href="#"> <i class="fa fa-youtube"></i></a>
+                                                    <a href="#"> <i class="fa fa-linkedin"></i></a>
+                                                  </div>
+                                              </div>
+                                        </div>
+                                    </div> --}}
+
+                                </div>
+                            </div>
+
+                        </div>
+                     </div>
+                <!-- OUR Team END -->
+            @endif
+
+
+            @if (count($packages) > 0)
+
+
+             <!-- Our PRICING PLAN -->
+                <div class="section-full text-center bg-gray bg-no-repeat p-t80 p-b50 bg-top-right mobile-page-padding" style="background-image:url(images/background/bg-4.png)">
+                    <div class="container">
+
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="mt-separator-outer separator-center">
+                                <div class="mt-separator">
+                                    <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 text-primary" >لنا </span> التسعير</h2>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- TITLE END -->
+
+                        <div class="section-content">
+                            <div class="pricingtable-row">
+                                <div class="row">
+                                    @foreach ($packages as $item)
+                                    <div class="col-lg-4  col-md-4 col-sm-4  col-xs-6 col-xs-100pc  m-b30">
+                                        <div class="pricingtable-wrapper pricing-table-style-5 bg-white overflow-hide hover-shadow bdr-t-4 bdr-solid bdr-primary">
+                                            <div class="pricingtable-inner">
+                                                <div class="pricingtable-title">
+                                                    <h4>{{ $item->name }}</h4>
+                                                </div>
+
+                                                <div class="pricingtable-price">
+                                                    <span class="pricingtable-bx">{{ $item->price }}</span>
+                                                    <span class="pricingtable-type">{{ $item->long }}</span>
+                                                </div>
+
+                                                <ul class="pricingtable-features text-black">
+                                                    {{-- {{ dd($item)  }} --}}
+                                                    @foreach (json_decode($item->prop) as $item)
+                                                    <li>{{$item}}</li>
+                                                    @endforeach
+                                                    {{-- <li>الدعم عبر الهاتف والبريد الإلكتروني  </li>
+                                                    <li>3 الحساب الاجتماعي</li>
+                                                    <li>تقارير ذات علامة تجارية </li> --}}
+                                                </ul>
+
+                                                <div class="pricingtable-footer">
+                                                    <a href="javascript:void(0);" class="site-button btn-effect">عملية الشراء</a>
+                                                </div>
+
+                                                <div class="overlay-main bg-white opacity-07"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                                                    {{-- <div class="col-lg-4  col-md-4 col-sm-4  col-xs-6 col-xs-100pc  m-b30">
+                                        <div class="pricingtable-wrapper pricing-table-style-5 bg-white overflow-hide hover-shadow bdr-t-4 bdr-solid bdr-primary">
+                                            <div class="pricingtable-inner">
+                                                <div class="pricingtable-title">
+                                                    <h4>الخطة الأساسية</h4>
+                                                </div>
+
+                                                <div class="pricingtable-price">
+                                                    <span class="pricingtable-bx">$29</span>
+                                                    <span class="pricingtable-type">شهر</span>
+                                                </div>
+
+                                                <ul class="pricingtable-features text-black">
+                                                    <li>الدعم عبر الهاتف والبريد الإلكتروني  </li>
+                                                    <li>3 الحساب الاجتماعي</li>
+                                                    <li>تقارير ذات علامة تجارية </li>
+                                                </ul>
+
+                                                <div class="pricingtable-footer">
+                                                    <a href="javascript:void(0);" class="site-button btn-effect">عملية الشراء</a>
+                                                </div>
+
+                                                <div class="overlay-main bg-white opacity-07"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4  col-sm-4  col-xs-6 col-xs-100pc m-b30">
+                                        <div class="pricingtable-wrapper  pricing-table-style-5 overflow-hide hover-shadow bdr-t-4 bdr-solid bdr-primary">
+                                            <div class="pricingtable-inner">
+
+                                                <div class="pricingtable-title">
+                                                    <h4>خطة للمحترفين</h4>
+                                                </div>
+
+                                                <div class="pricingtable-price">
+                                                    <span class="pricingtable-bx">$49</span>
+                                                    <span class="pricingtable-type">شهر</span>
+                                                </div>
+
+                                                <ul class="pricingtable-features text-black">
+                                                    <li>الدعم عبر الهاتف والبريد الإلكتروني  </li>
+                                                    <li>3 الحساب الاجتماعي</li>
+                                                    <li>تقارير ذات علامة تجارية </li>
+                                                </ul>
+
+                                                <div class="pricingtable-footer">
+                                                    <a href="javascript:void(0);" class="site-button btn-effect">عملية الشراء</a>
+                                                </div>
+
+                                                <div class="overlay-main bg-white opacity-07"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-4  col-sm-4  col-xs-12 m-b30">
+                                        <div class="pricingtable-wrapper  pricing-table-style-5 overflow-hide hover-shadow bdr-t-4 bdr-solid bdr-primary bg-gray">
+                                            <div class="pricingtable-inner">
+
+                                                <div class="pricingtable-title">
+                                                    <h4>الخطة المميزة</h4>
+                                                </div>
+
+                                                <div class="pricingtable-price">
+                                                    <span class="pricingtable-bx">$99</span>
+                                                    <span class="pricingtable-type">شهر</span>
+                                                </div>
+
+                                                <ul class="pricingtable-features text-black">
+                                                    <li>الدعم عبر الهاتف والبريد الإلكتروني  </li>
+                                                    <li>3 الحساب الاجتماعي</li>
+                                                    <li>تقارير ذات علامة تجارية </li>
+                                                </ul>
+
+                                                <div class="pricingtable-footer">
+                                                    <a href="javascript:void(0);" class="site-button btn-effect">عملية الشراء</a>
+                                                </div>
+
+                                                <div class="overlay-main bg-white opacity-07"></div>
+                                            </div>
+
+                                        </div>
+                                    </div> --}}
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Our PRICING PLAN -->
+            @endif
+            <!-- CLIENT LOGO SECTION START -->
+            <div class="section-full p-t10 bg-white ">
+                <div class="container">
+                    <div class="section-content">
+
+                        <!-- TESTIMONIAL 4 START ON BACKGROUND -->
+                        <div class="section-content">
+                             <div class="section-content p-tb10 owl-btn-vertical-center">
+                                <div class="owl-carousel home-client-carousel-2">
+
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo client-logo-media">
+                                            <a href="javascript:void(0);"><img src="images/client-logo/w1.png" alt=""></a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo client-logo-media">
+                                            <a href="javascript:void(0);"><img src="images/client-logo/w2.png" alt=""></a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo client-logo-media">
+                                            <a href="javascript:void(0);"><img src="images/client-logo/w3.png" alt=""></a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo client-logo-media">
+                                            <a href="javascript:void(0);"><img src="images/client-logo/w4.png" alt=""></a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo client-logo-media">
+                                            <a href="javascript:void(0);"><img src="images/client-logo/w5.png" alt=""></a></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="ow-client-logo">
+                                            <div class="client-logo client-logo-media">
+                                            <a href="javascript:void(0);"><img src="images/client-logo/w6.png" alt=""></a></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CLIENT LOGO  SECTION End -->
+
+            <!-- TESTIMONIALS SECTION START -->
+            <div class="section-full p-t80 bg-dark square_shape2  square_shape1 bg-moving" style="background-image:url(images/background/bg-6.png)">
+                <div class="container">
+                    <div class="section-content">
+
+                        <!-- TITLE START -->
+                        <div class="section-head">
+                            <div class="mt-separator-outer separator-center">
+                                <div class="mt-separator">
+                                    <h2 class="text-white text-uppercase sep-line-one "><span class="font-weight-300 text-primary">عميل</span> الشهادات - التوصيات</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TITLE END -->
+
+                            <!-- TESTIMONIAL START -->
+                         <div class="owl-carousel testimonial-home-2 p-b120">
+                            <div class="item">
+                           		 <div class="col-sm-12 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
+                                	<div class="testimonial-1 testimonial-bg m-a30 hover-animation-1 text-center text-white">
+                                        <div class="testimonial-detail clearfix">
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/testimonials/pic1.jpg" width="100" height="100" alt=""></div>
+                                        </div>
+                                        <div class="testimonial-text">
+                                            <span class="fa fa-quote-right"></span>
+                                            <p>دعم العملاء الممتاز! القالب نفسه منتهي جدًا. ببساطة نص وهمي للطباعة والصناعة. صناعة الطباعة والتنضيد. كانت لوريم إيبسوم هي الصناعة</p>
+                                        </div>
+                                        <div class="testimonial-detail clearfix">
+                                            <h4 class="testimonial-name m-b5">شيلي جونسون -</h4>
+                                            <span class="testimonial-position">رجل أعمال</span>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="item">
+                           		 <div class="col-sm-12 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
+                                	<div class="testimonial-1 testimonial-bg m-a30 hover-animation-1 text-center text-white">
+                                        <div class="testimonial-detail clearfix">
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/testimonials/pic2.jpg" width="100" height="100" alt=""></div>
+                                        </div>
+                                        <div class="testimonial-text">
+                                            <span class="fa fa-quote-right"></span>
+                                            <p>دعم العملاء الممتاز! القالب نفسه منتهي جدًا. ببساطة نص وهمي للطباعة والصناعة. صناعة الطباعة والتنضيد. كانت لوريم إيبسوم هي الصناعة</p>
+                                        </div>
+                                        <div class="testimonial-detail clearfix">
+                                            <h4 class="testimonial-name m-b5">شيلي جونسون -</h4>
+                                            <span class="testimonial-position">رجل أعمال</span>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="item">
+                           		 <div class="col-sm-12 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
+                                	<div class="testimonial-1 testimonial-bg m-a30 hover-animation-1 text-center text-white">
+                                        <div class="testimonial-detail clearfix">
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/testimonials/pic3.jpg" width="100" height="100" alt=""></div>
+                                        </div>
+                                        <div class="testimonial-text">
+                                            <span class="fa fa-quote-right"></span>
+                                            <p>دعم العملاء الممتاز! القالب نفسه منتهي جدًا. ببساطة نص وهمي للطباعة والصناعة. صناعة الطباعة والتنضيد. كانت لوريم إيبسوم هي الصناعة</p>
+                                        </div>
+                                        <div class="testimonial-detail clearfix">
+                                            <h4 class="testimonial-name m-b5">شيلي جونسون -</h4>
+                                            <span class="testimonial-position">رجل أعمال</span>
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+            	</div>
+            </div>
+            <!-- TESTIMONIALS SECTION END -->
+
+
+
         </div>
-    </body>
+        <!-- CONTENT END -->
+
+        <!-- FOOTER START -->
+        <footer class="site-footer footer-large  footer-light	footer-wide">
+            <div class="container call-to-action-wrap bg-no-repeat bg-center" style="background-image:url(images/background/bg-site.png);">
+                <div class="p-a30  bg-primary">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8">
+                            <div class="call-to-action-left text-black">
+                                <h4 class="text-uppercase m-b10 m-t0">اشترك في نشرتنا الإخبارية!</h4>
+                                <span>لا تفوت أي شيء من الشكل بالتسجيل في النشرة الإخبارية.</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-4">
+                            <div class="call-to-action-right">
+                                <div class="widget_newsletter">
+                                    <div class="newsletter-bx">
+                                        <form role="search" method="post">
+                                            <div class="input-group">
+                                                <input name="news-letter" class="form-control" placeholder="أدخل بريدك الإلكتروني" type="text">
+                                                <span class="input-group-btn">
+                                                    <button type="submit" class="site-button"><i class="fa fa-paper-plane-o"></i></button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <!-- FOOTER BLOCKES START -->
+            <div class="footer-top overlay-wraper">
+                <div class="overlay-main"></div>
+                <div class="container">
+                    <div class="row">
+                        <!-- ABOUT COMPANY -->
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget widget_about">
+                                <!--<h4 class="widget-title">About Company</h4>-->
+                                <div class="logo-footer clearfix p-b15">
+                                    <a href="index.html"><img src="images/logo-light.png" alt=""></a>
+                                </div>
+								<p class="max-w400">اليوم يمكننا أن نخبرك ، بفضل شغفك وإبداعك في العمل الشاق وخبرتك ، لقد قدمت لنا أجمل إطلالات المنزل.</p>
+
+                                <ul class="social-icons  mt-social-links">
+                                    <li><a href="{{ $companys->first()->google ?? "" }}" class="fa fa-google"></a></li>
+                                    <li><a href="{{ $companys->first()->instagram ?? "" }}" class="fa fa-rss"></a></li>
+                                    <li><a href="{{ $companys->first()->face ?? "" }}" class="fa fa-facebook"></a></li>
+                                    <li><a href="{{ $companys->first()->twitter ?? "" }}" class="fa fa-twitter"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- RESENT POST -->
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="widget widget_address_outer">
+                                <h4 class="widget-title">اتصل بنا</h4>
+                                <ul class="widget_address">
+                                    <li>{{ $companys->first()->address ?? "" }}</li>
+                                    <li>{{ $companys->first()->email ?? "" }}</li>
+                                    <li>{{ $companys->first()->phone ?? "" }}</li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <!-- USEFUL LINKS -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 footer-col-3">
+                            <div class="widget widget_services inline-links">
+                                <h4 class="widget-title">روابط مفيدة</h4>
+                                <ul>
+                                    <li><a href="about-1.html">حول</a></li>
+                                    <li><a href="project-grid.html">المشاريع</a></li>
+                                    <li><a href="blog-grid.html">مدونة</a></li>
+                                    <li><a href="contact-1.html">اتصل بنا</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- TAGS -->
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+							<div class="widget recent-posts-entry-date">
+                                <h4 class="widget-title">المنشور الاخير</h4>
+                                <div class="widget-post-bx">
+                                    <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
+                                        <div class="mt-post-date text-center text-uppercase text-white p-tb5">
+											<strong class="p-date">24</strong>
+                                            <span class="p-month">أبريل</span>
+                                            <span class="p-year">2019</span>
+                                        </div>
+                                        <div class="mt-post-info">
+                                            <div class="mt-post-header">
+                                                <h6 class="post-title"><a href="blog-single.html">على هذه الحزم ، نبني الأحلام.</a></h6>
+                                            </div>
+                                            <div class="mt-post-meta">
+                                                <ul>
+                                                    <li class="post-author"><i class="fa fa-user"></i>بواسطة المشرف</li>
+                                                    <li class="post-comment"><i class="fa fa-comments"></i> 28</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
+                                        <div class="mt-post-date text-center text-uppercase text-white p-tb5">
+                                            <strong class="p-date">30</strong>
+                                            <span class="p-month">مايو</span>
+                                            <span class="p-year">2019</span>
+                                        </div>
+                                        <div class="mt-post-info">
+                                            <div class="mt-post-header">
+                                                <h6 class="post-title"><a href="blog-single.html">سنكون ضجة كبيرة بالنسبة لك التجديد المقبل</a></h6>
+                                            </div>
+                                            <div class="mt-post-meta">
+                                                <ul>
+                                                    <li class="post-author"><i class="fa fa-user"></i>بواسطة المشرف</li>
+                                                    <li class="post-comment"><i class="fa fa-comments"></i> 29</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- NEWSLETTER -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER COPYRIGHT -->
+            <div class="footer-bottom overlay-wraper">
+                <div class="overlay-main"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="mt-footer-bot-center">
+                            <span class="copyrights-text">© 2018 Your Company. Designed By 7xtheme.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOOTER END -->
+
+
+        <!-- BUTTON TOP START -->
+		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+
+    </div>
+
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-loader">جار التحميل</div>
+    </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+
+<!-- JAVASCRIPT  FILES ========================================= -->
+<script  src="{{ asset('js/jquery-1.12.4.min.js')}}"></script><!-- JQUERY.MIN JS -->
+<script  src="{{ asset('js/bootstrap.min.js')}}"></script><!-- BOOTSTRAP.MIN JS -->
+
+<script  src="{{ asset('js/magnific-popup.min.js')}}"></script><!-- MAGNIFIC-POPUP JS -->
+
+<script  src="{{ asset('js/waypoints.min.js')}}"></script><!-- WAYPOINTS JS -->
+<script  src="{{ asset('js/counterup.min.js')}}"></script><!-- COUNTERUP JS -->
+<script  src="{{ asset('js/waypoints-sticky.min.js')}}"></script><!-- COUNTERUP JS -->
+
+<script  src="{{ asset('js/isotope.pkgd.min.js')}}"></script><!-- MASONRY  -->
+
+<script  src="{{ asset('js/owl.carousel.min.js')}}"></script><!-- OWL  SLIDER  -->
+<script src="{{ asset('js/jquery.owl-filter.js')}}"></script>
+
+<script  src="{{ asset('js/stellar.min.js')}}"></script><!-- PARALLAX BG IMAGE   -->
+
+
+
+<script  src="{{ asset('js/custom.js')}}"></script><!-- CUSTOM FUCTIONS  -->
+<script  src="{{ asset('js/shortcode.js')}}"></script><!-- SHORTCODE FUCTIONS  -->
+<script  src="{{ asset('js/jquery.bgscroll.js')}}"></script><!-- BACKGROUND SCROLL -->
+<script src="{{ asset('js/switcher.js')}}"></script><!-- SWITCHER FUCTIONS  -->
+<!-- REVOLUTION JS FILES -->
+
+<script  src="{{ asset('plugins/revolution/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+<script  src="{{ asset('plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+<script  src="{{ asset('plugins/revolution/revolution/js/extensions/revolution-plugin.js')}}"></script>
+
+<!-- REVOLUTION SLIDER SCRIPT FILES -->
+<script  src="{{ asset('js/rev-script-2.js')}}"></script>
+@if (session()->get('msg'))
+<script>
+
+    swal('{{session()->get('msg')}}');
+</script>
+@endif
+
+<!-- STYLE SWITCHER  ======= -->
+<div class="styleswitcher">
+
+    <div class="switcher-btn-bx">
+        <a class="switch-btn">
+            <span class="fa fa-cog fa-spin"></span>
+        </a>
+    </div>
+
+    <div class="styleswitcher-inner">
+
+        <h6 class="switcher-title">لون البشرة </h6>
+        <ul class="color-skins">
+            <li><a class="theme-skin skin-1" href="index-2a39b.html?theme=css/skin/skin-1" title="default Theme"></a></li>
+            <li><a class="theme-skin skin-2" href="index-261e7.html?theme=css/skin/skin-2" title="pink Theme"></a></li>
+            <li><a class="theme-skin skin-3" href="index-2cce5.html?theme=css/skin/skin-3" title="sky Theme"></a></li>
+            <li><a class="theme-skin skin-4" href="index-213f7.html?theme=css/skin/skin-4" title="green Theme"></a></li>
+            <li><a class="theme-skin skin-5" href="index-219a6.html?theme=css/skin/skin-5" title="red Theme"></a></li>
+            <li><a class="theme-skin skin-6" href="index-2fe5c.html?theme=css/skin/skin-6" title="orange Theme"></a></li>
+            <li><a class="theme-skin skin-7" href="index-2ab47.html?theme=css/skin/skin-7" title="purple Theme"></a></li>
+            <li><a class="theme-skin skin-8" href="index-25f8d.html?theme=css/skin/skin-8" title="blue Theme"></a></li>
+        </ul>
+
+    </div>
+</div>
+<!-- STYLE SWITCHER END ==== -->
+
+</body>
+
+
+<!-- Mirrored from 7xtheme.com/shapen-rtl/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Nov 2020 19:30:54 GMT -->
 </html>

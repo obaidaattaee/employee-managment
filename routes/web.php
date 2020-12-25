@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('home'));
 });
 
 Auth::routes();
@@ -138,5 +138,5 @@ Route::prefix('site')->namespace('App\Http\Controllers\User')->group(function(){
 
 
 Route::get('test' , function (){
-    return view('frontend.slide.create');
+    return view('site.login');
 } );
