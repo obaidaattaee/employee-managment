@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('employee/register' , 'App\Http\Controllers\Auth\RegisterController@showUserRegisterFrom')->name('user.register');
 Route::get('customer/register' , 'App\Http\Controllers\Auth\RegisterController@showCustomerRegisterFrom')->name('customer.register');
+Route::get('person/login' , 'App\Http\Controllers\Auth\RegisterController@showCustomerLoginFrom')->name('person.login');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware(['auth' , 'super_admin' ])->namespace('\App\Http\Controllers\Admin')->group(function () {

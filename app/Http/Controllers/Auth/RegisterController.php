@@ -117,5 +117,10 @@ class RegisterController extends Controller
         return view('auth.customer_register');
 
     }
+    public function showCustomerLoginFrom(){
+
+        return view('site.login');
+
+    }
 
 }

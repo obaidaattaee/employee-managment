@@ -271,7 +271,7 @@
                                     <a href="javascript:;">تسجيل الدخول </a>
                                     <ul class="sub-menu">
                                         @guest
-                                        <li><a href="{{ route('login') }}">تسجيل الدخول</a></li>
+                                        <li><a href="{{ route('person.login') }}">تسجيل الدخول</a></li>
 
                                         @endguest
                                         @auth
