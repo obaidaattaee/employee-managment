@@ -2,7 +2,6 @@
 @section('content')
 <!-- CONTENT START -->
 <div class="page-content">
-
     <!-- INNER PAGE BANNER -->
     <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/4.jpg);">
         <div class="overlay-main bg-black opacity-07"></div>

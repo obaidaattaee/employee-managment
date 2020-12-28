@@ -39,6 +39,10 @@
                                 </div> --}}
 
                                 <div class="col-md-6 form-group">
+                                    <label>مكان العمل  </label>
+                                    <input name="phone" type="text" value="{{$report->work_space}}" required class="form-control" placeholder="رقم الجوال">
+                                </div>
+                                <div class="col-md-6 form-group">
                                     <label>رقم الجوال</label>
                                     <input name="phone" type="text" value="{{$report->phone}}" required class="form-control" placeholder="رقم الجوال">
                                 </div>
@@ -82,8 +86,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
+                                                    </div>
                                               </div>
                                             </div>
                                           </div>

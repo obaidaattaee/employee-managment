@@ -82,14 +82,10 @@
                                 </div>
 
                                 <div class="col-md-6 form-group">
-                                    <label for="emo_id" class="caption-subject bold uppercase">اسم العميل</label>
-                                    <select name="company_id" class="form-control">
-                                        <option value=''>مكان العمل </option>
-                                        @foreach(auth()->user()->companies as $emo)
-                                            <option class="form-control select2 "
-                                                    {{old('company_id')== $emo->id?"selected":""}} value='{{$emo->id}}'>{{$emo->address}}</option>
-                                        @endforeach
-                                    </select>
+                                    <label for="emo_id" class="caption-subject bold uppercase">مكان العمل  </label>
+                                    <input name="company_id" type="hidden" required class="form-control" value="{{auth()->user()->company->id }}" placeholder="مكان العمل ">
+                                    <input name="work_space" type="text" required class="form-control" placeholder="مكان العمل ">
+
                                 </div>
 
                                 <div class="col-md-6 form-group">

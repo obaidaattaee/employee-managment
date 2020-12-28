@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\CompanyMiddleware;
+use App\Http\Middleware\CompanyVerifiedMiddleware;
 use App\Http\Middleware\CustomerMiddleware;
 use App\Http\Middleware\EmployeeMiddleware;
 use App\Http\Middleware\SuperAdminMiddleware;
@@ -70,6 +71,7 @@ class Kernel extends HttpKernel
         'company' =>             CompanyMiddleware::class ,
         'employee' =>             EmployeeMiddleware::class ,
         'customer' =>             CustomerMiddleware::class ,
+        'company_verified' =>             CompanyVerifiedMiddleware::class ,
 
     ];
 }

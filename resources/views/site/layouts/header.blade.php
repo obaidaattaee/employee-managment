@@ -105,49 +105,37 @@
                 <div class="header-nav navbar-collapse collapse">
                     <ul class=" nav navbar-nav">
                         <li class="active">
-                        <a href="#">الصفحة الرئيسية</a>
+                            <a href="{{route('home')}}">الصفحة الرئيسية</a>
 
                         </li>
 
+
+                       
                         <li>
-                            <a href="about-1.html">معلومات عنا</a>
-                        </li>
-                        <li>
-                            <a href="services.html">خدمات</a>
-                        </li>
+                            <li class="submenu-direction">
+                                <a href="javascript:;">تسجيل الدخول </a>
+                                <ul class="sub-menu">
+                                    @guest
+                                    <li><a href="{{ route('person.login') }}">تسجيل الدخول</a></li>
+                                    <li><a href="{{ route('user.register') }}"> تسجيل موظف جديد </a></li>
+                                    <li><a href="{{ route('customer.register') }}">تسجيل عميل جديد</a></li>
 
-                        <li>
-                            <a href="javascript:;">المشاريع</a>
+                                    @endguest
+                                    @auth
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                  document.getElementById('logout-form').submit();">
+                                     {{ __('Logout') }}
+                                 </a>
 
-                        </li>
+                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                     @csrf
+                                 </form>
 
+                                    @endauth
 
-                        <li class="submenu-direction">
-                            <a href="javascript:;">الشركات الفرعيه</a>
-                                {{-- @if($company->subCompany->title) --}}
-                            <ul class="sub-menu">
-                                {{-- <li><a href="accordian.html">{{$company->subCompany->title}}</a></li> --}}
-
-                            </ul>
-                            {{-- @endif --}}
-                        </li>
-
-                        <li>
-                            <a href="javascript:;">اتصل بنا</a>
-
-                        </li>
-                        <li>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                                
-
+                                </ul>
+                            </li>
                         </li>
                     </ul>
                 </div>

@@ -165,7 +165,7 @@
                                             <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-map-marker"></i></div>
                                             <div class="icon-content">
                                                 <h5 class="m-t0 font-weight-500">معلومات العنوان</h5>
-                                                <p>{{$companys->first()->email ?? "201 شارع ليفربول ، جناح 721 ، لندن" }} </p>
+                                                <p>{{$companys->first()->address ?? "201 شارع ليفربول ، جناح 721 ، لندن" }} </p>
                                             </div>
                                         </div>
                                     </div>
@@ -200,78 +200,18 @@
                         <div class="header-nav navbar-collapse collapse">
                             <ul class=" nav navbar-nav">
                                 <li class="active">
-                                    <a href="javascript:;">الصفحة الرئيسية</a>
-                                 <ul class="sub-menu">
+                                    <a href="{{route('home')}}">الصفحة الرئيسية</a>
 
-                                        <li>
-                                            <a href="index.html">الصفحة الرئيسية -1</a>
-                                        </li>
-                                        <li>
-                                            <a href="index-2.html">الصفحة الرئيسية -2</a>
-                                        </li>
-                                        <li>
-                                            <a href="index-3.html">لصفحة الرئيسية  أسلوب محاصر  -3 </a>
-                                        </li>
-                                        <li>
-                                            <a href="index-4.html">الصفحة الرئيسية -4</a>
-                                        </li>
-                                    </ul>
                                 </li>
 
-                                <li>
-                                    <a href="about-1.html">معلومات عنا</a>
-                                </li>
-                                <li>
-                                    <a href="services.html">خدمات</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">الصفحات</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="javascript:;">مدونة</a>
-                                            <ul class="sub-menu has-child">
-                                                <li><a href="blog-grid.html">شبكة المدونة</a></li>
-                                                <li><a href="blog-listing.html">قائمة المدونات</a></li>
-                                                <li><a href="blog-masonry.html">مدونة البناء</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="faq.html">التعليمات</a>
-                                        </li>
-                                        <li>
-                                            <a href="error-404.html">خطأ 404</a>
-                                        </li>
-                                        <li>
-                                            <a href="contact-1.html">اتصل بنا</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">تفاصيل المشاركة</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="post-image.html">نشر الصورة</a></li>
-                                        <li><a href="post-gallery.html">معرض البريد</a></li>
-                                        <li><a href="post-video.html">انشر الفيديو</a></li>
-                                        <li><a href="post-right-sidebar.html">نشر الشريط الجانبي الأيمن</a></li>
-                                    </ul>
-                                </li>
-
-                                <li>
-                                    <a href="javascript:;">المشاريع</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="project-grid.html">شبكة المشروع</a></li>
-                                        <li><a href="project-masonry.html">مشروع الماسونية</a></li>
-                                        <li><a href="project-carousel.html">مشروع كاروسيل</a></li>
-                                        <li><a href="project-classic.html">مشروع كلاسيكي -1</a></li>
-                                        <li><a href="project-classic2.html">مشروع كلاسيكي -2</a></li>
-                                        <li><a href="project-detail.html">تفاصيل المشروع</a></li>
-                                    </ul>
-                                </li>
                                 <li class="submenu-direction">
                                     <a href="javascript:;">تسجيل الدخول </a>
                                     <ul class="sub-menu">
                                         @guest
                                         <li><a href="{{ route('person.login') }}">تسجيل الدخول</a></li>
+                                        <li><a href="{{ route('user.register') }}"> تسجيل موظف جديد </a></li>
+                                        <li><a href="{{ route('customer.register') }}">تسجيل عميل جديد</a></li>
+                                        <li><a href="{{ route('register') }}">تسجيل  شركة</a></li>
 
                                         @endguest
                                         @auth
@@ -304,7 +244,7 @@
 
             <!-- SLIDER START -->
             <div id="welcome_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="goodnews-header" dir="ltr">
-                <div id="rev_slider_one" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.3.1">
+                <div id="rev_slider_one" class="rev_slider fullwidthabanner"  data-version="5.4.3.1">
                     <ul>
                         <!-- SLIDE 1 -->
                         {{-- @if (count($slides) > 0)
@@ -314,177 +254,6 @@
 
 
                         @endif --}}
-
-                        <li data-index="rs-901"
-                        data-transition="fade"
-                        data-slotamount="default"
-                        data-hideafterloop="0"
-                        data-hideslideonmobile="off"
-                        data-easein="default"
-                        data-easeout="default"
-                        data-masterspeed="default"
-                        data-thumb="images/main-slider/slider2/slide1.jpg"
-                        data-rotate="0"
-                        data-fstransition="fade"
-                        data-fsmasterspeed="300"
-                        data-fsslotamount="7"
-                        data-saveperformance="off"
-                        data-title=""
-                        data-param1=""
-                        data-param2=""
-                        data-param3=""
-                        data-param4=""
-                        data-param5=""
-                        data-param6=""
-                        data-param7=""
-                        data-param8=""
-                        data-param9=""
-                        data-param10=""
-                        data-description="">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/main-slider/slider2/slide1.jpg" alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina=""/>
-                            <!-- LAYERS -->
-                            <!-- LAYER NR. 1 [ for overlay ] -->
-                            <div class="tp-caption tp-shape tp-shapewrapper "
-                            id="slide-901-layer-0"
-                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
-                            data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
-                            data-width="full"
-                            data-height="full"
-                            data-whitespace="nowrap"
-                            data-type="shape"
-                            data-basealign="slide"
-                            data-responsive_offset="off"
-                            data-responsive="off"
-                            data-frames='[
-                            {"from":"opacity:0;","speed":1000,"to":"o:1;","delay":0,"ease":"Power4.easeOut"},
-                            {"delay":"wait","speed":1000,"to":"opacity:0;","ease":"Power4.easeOut"}
-                            ]'
-                            data-textAlign="['left','left','left','left']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index: 1;background-color:rgba(0, 0, 0, 0.0);border-color:rgba(0, 0, 0, 0);border-width:0px;">
-                            </div>
-
-
-
-
-                            <!-- LAYER NR. 4 [ for title ] -->
-                            <div class="tp-caption   tp-resizeme"
-                            id="slide-901-layer-2"
-                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
-                            data-y="['top','top','top','top']" data-voffset="['200','200','140','160']"
-                            data-fontsize="['72','72','62','52']"
-                            data-lineheight="['82','82','72','62']"
-                            data-width="['700','700','700','96%']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-
-                            data-type="text"
-                            data-responsive_offset="on"
-                           data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['right','right','right','right']"
-                            data-paddingtop="[5,5,5,5]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index: 13;
-                            white-space: normal;
-                            font-weight: 700;
-                            color:#111;
-                            border-width:0px;font-family: 'Poppins', sans-serif; text-transform:uppercase ;">
-                            <div>نحن نبني حلمك</div>
-
-                            </div>
-
-                            <!-- LAYER NR. 5 [ for block] -->
-
-
-
-
-                            <!-- LAYER NR. 5 [ for block] -->
-                            <div class="tp-caption   tp-resizeme"
-                            id="slide-901-layer-4"
-                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
-                            data-y="['top','top','top','top']" data-voffset="['310','310','260','260']"
-                            data-fontsize="['20','20','38','28']"
-                            data-lineheight="['28','28','48','38']"
-                            data-width="['600','600','700','600']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-
-                            data-type="text"
-                            data-responsive_offset="on"
-                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['right','right','right','right']"
-                            data-paddingtop="[5,5,5,5]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index: 13;
-                            white-space: normal;
-                            font-weight: 500;
-                            color:#111;
-                             border-width:0px;font-family: 'Poppins', sans-serif;">
-                            من الحقائق الثابتة أن المحتوى الذي يمكن قراءته سيشتت انتباه القارئ.
-
-                            </div>
-
-                            <!-- LAYER NR. 5 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme"
-                            id="slide-901-layer-5"
-                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
-
-                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
-                            data-lineheight="['none','none','none','none']"
-                            data-width="['300','300','300','300']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-
-                            data-type="text"
-                            data-responsive_offset="on"
-                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['right','right','right','right']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index:100; text-transform:uppercase; margin:10px">
-                            <a href="javascript:;" class="site-button-secondry btn-effect">المزيد عن</a>
-                            </div>
-
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme"
-                            id="slide-901-layer-6"
-                            data-x="['right','right','right','right']" data-hoffset="['260','330','330','330']"
-
-                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
-                            data-lineheight="['none','none','none','none']"
-                            data-width="['300','300','300','300']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-
-                            data-type="text"
-                            data-responsive_offset="on"
-                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['right','right','right','right']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index:100; text-transform:uppercase; margin:10px">
-                            <a href="javascript:;" class="site-button btn-effect">اتصل بنا</a>
-                            </div>
-                        </li>
-
 
                         <!-- SLIDE 2 -->
                        <li data-index="rs-902"
@@ -569,93 +338,7 @@
                             font-weight: 700;
                             color:#111;
                             border-width:0px;font-family: 'Poppins', sans-serif; text-transform:uppercase ;">
-                            <div>من المفهوم إلى الخلق.</div>
-
                             </div>
-
-                            <!-- LAYER NR. 5 [ for block] -->
-
-
-
-
-                            <!-- LAYER NR. 5 [ for block] -->
-                            <div class="tp-caption   tp-resizeme"
-                            id="slide-902-layer-4"
-                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
-                            data-y="['top','top','top','top']" data-voffset="['310','310','260','300']"
-                            data-fontsize="['20','20','38','28']"
-                            data-lineheight="['28','28','48','38']"
-                            data-width="['600','600','700','600']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-
-                            data-type="text"
-                            data-responsive_offset="on"
-                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['right','right','right','right']"
-                            data-paddingtop="[5,5,5,5]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index: 13;
-                            white-space: normal;
-                            font-weight: 500;
-                            color:#111;
-                             border-width:0px;font-family: 'Poppins', sans-serif;">
-                            من الحقائق الثابتة أن المحتوى الذي يمكن قراءته سيشتت انتباه القارئ.
-
-                            </div>
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme"
-                            id="slide-902-layer-5"
-                            data-x="['right','right','right','right']" data-hoffset="['50','130','130','130']"
-
-                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
-                            data-lineheight="['none','none','none','none']"
-                            data-width="['300','300','300','300']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-
-                            data-type="text"
-                            data-responsive_offset="on"
-                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['right','right','right','right']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index:100; text-transform:uppercase;margin:10px">
-                            <a href="javascript:;" class="site-button-secondry btn-effect ">المزيد عن</a>
-                            </div>
-
-                            <!-- LAYER NR. 6 [ for see all service botton ] -->
-                            <div class="tp-caption tp-resizeme"
-                            id="slide-902-layer-6"
-                            data-x="['right','right','right','right']" data-hoffset="['260','330','330','330']"
-
-                            data-y="['top','top','top','top']" data-voffset="['390','390','400','400']"
-                            data-lineheight="['none','none','none','none']"
-                            data-width="['300','300','300','300']"
-                            data-height="['none','none','none','none']"
-                            data-whitespace="['normal','normal','normal','normal']"
-
-                            data-type="text"
-                            data-responsive_offset="on"
-                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'
-                            data-textAlign="['right','right','right','right']"
-                            data-paddingtop="[0,0,0,0]"
-                            data-paddingright="[0,0,0,0]"
-                            data-paddingbottom="[0,0,0,0]"
-                            data-paddingleft="[0,0,0,0]"
-
-                            style="z-index:100; text-transform:uppercase; margin:10px">
-                            <a href="javascript:;" class="site-button btn-effect">اتصل بنا</a>
-                            </div>
-
-                        </li>
 
                         <!-- SLIDE 2 -->
 
@@ -672,19 +355,18 @@
                         <!-- IMAGE CAROUSEL START -->
                         <div class="section-content">
                             <div class="row">
-                                    @foreach ($services as $item)
+                                    @foreach ($services as $key => $item)
                                     <div class="col-md-4 col-sm-4 m-b30">
                                         <div class="half-blocks">
                                             <div class="mt-icon-box-wraper center m-b30">
                                                 <div class="half-block-content icon-count-2 p-a30 p-tb50">
-                                                    <span class="icon-count-number">1</span>
+                                                    <span class="icon-count-number">{{ $key+1 }}</span>
                                                     <div class="mt-icon-box-lg radius bg-gray m-b20 scale-in-center">
                                                         <span class="icon-cell"><img src="images/icon/compass.png" alt=""></span>
                                                     </div>
                                                     <div class="icon-content">
                                                         <h4 class="mt-tilte m-b25">{{$item->title}}</h4>
                                                         <p>{{$item->summary}}</p>
-                                                        <a href="#" class="site-button-link" data-hover="اقرأ أكثر">اقرأ أكثر <i class="fa fa-angle-right arrow-animation"></i></a>
                                                     </div>
                                                 </div>
                                                 <div class="bg-cover  half-blocks-bg" style="background-image:url(images/services/1.jpg)"></div>
@@ -798,14 +480,10 @@
 
                                             <div class="col-lg-4 col-md-12 col-sm-12">
                                                 <div class="about-home-right about-right-v2 bg-primary text-black p-a30">
-                                                    <h3 class="m-t0"><span class="font-weight-100">ملتزم</span>لجودة ونتائج عالية.</h3>
-                                                    <p><strong>خلافا للاعتقاد الشائع ، لوريم إيبسوم ليس كذلك
-                                                            ببساطة نص. لها جذور في قطعة
-                                                            الأدب اللاتيني الكلاسيكي من 45 قبل الميلاد ، مما يجعله
-                                                            أكثر من 2000 سنة.</strong></p>
+                                                    <h3 class="m-t0"><span class="font-weight-100">{{$abouts->first()->title}}</h3>
+                                                    <p><strong>{{$abouts->first()->details}}</strong></p>
 
                                                     <div class="text-left">
-                                                        <a href="#" class="site-button-secondry btn-effect">اقرأ أكثر</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -933,74 +611,6 @@
             </div>
             <!-- OUR VALUE END -->
 
-                <!-- OUR MISSION START -->
-                <div class="section-full bg-dark ">
-                    <div class="section-content">
-                        <div class="container get-in-touch-form">
-
-                            <div class="row">
-
-
-
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="contact-home1-left contact-home1-left-v2 bg-dark p-a30 m-b30 p-t50">
-                                        <h3 class="text-white m-t0"><span class="font-weight-100">أدخل</span> لمس. اتصال. صلة</h3>
-                                        <form class="cons-contact-form2 form-transparent" method="post" action="http://7xtheme.com/shapen-rtl/form-handler2.php">
-
-                                            <div class="input input-animate">
-                                                <label for="name">اسم</label>
-                                                <input type="text" name="username"  id="name" required>
-                                                <span class="spin"></span>
-                                            </div>
-
-                                            <div class="input input-animate">
-                                                <label for="email">البريد الإلكتروني</label>
-                                                <input type="email" name="email"   id="email" required>
-                                                <span class="spin"></span>
-                                            </div>
-
-                                            <div class="input input-animate">
-                                                <label for="Phone">هاتف</label>
-                                                <input type="text" name="phone"  id="Phone" required>
-                                                <span class="spin"></span>
-                                            </div>
-
-                                            <div class="input input-animate">
-                                                <label for="message">منطقة النص</label>
-                                                <textarea name="message"  id="message" required></textarea>
-                                                <span class="spin"></span>
-                                            </div>
-
-                                            <div class="text-left p-t10">
-                                                <button type="submit" class="site-button btn-effect ">
-                                                أرسل الآن
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-
-
-                                <div class="get-in-touch-form-section">
-                                    <div class="get-in-touch-form-section-img"><img src="images/s-pic-1.png" alt=""></div>
-                                    <div class="get-in-touch-info arrow-animation">
-                                        <div class="mt-icon-box-wraper  p-a20 left bg-white hover-shadow">
-                                            <div class="icon-md m-b20 scale-in-center">
-                                                <span class="icon-cell text-secondry"><img src="images/icon/icon-img-01.png" alt=""></span>
-                                            </div>
-                                            <div class="icon-content">
-                                                <h4 class="mt-tilte m-b0">تجربة رائعة لبناء البناء والتجديد</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
                 <!-- OUR MISSION  END -->
             @if (count($services) > 0 )
                 <!-- OUR SERVICES START -->
@@ -1015,7 +625,6 @@
                                             <h2 class="text-uppercase sep-line-one "><span class="font-weight-300 text-primary">لنا</span> خدمات</h2>
                                         </div>
                                     </div>
-                                    <h3>هناك العديد من الاختلافات في مقاطع لوريم إيبسوم المتاحة ، لكن الغالبية عانت من التغيير</h3>
                                 </div>
                                 <!-- TITLE END -->
 
@@ -1674,77 +1283,7 @@
             <!-- CLIENT LOGO  SECTION End -->
 
             <!-- TESTIMONIALS SECTION START -->
-            <div class="section-full p-t80 bg-dark square_shape2  square_shape1 bg-moving" style="background-image:url(images/background/bg-6.png)">
-                <div class="container">
-                    <div class="section-content">
 
-                        <!-- TITLE START -->
-                        <div class="section-head">
-                            <div class="mt-separator-outer separator-center">
-                                <div class="mt-separator">
-                                    <h2 class="text-white text-uppercase sep-line-one "><span class="font-weight-300 text-primary">عميل</span> الشهادات - التوصيات</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- TITLE END -->
-
-                            <!-- TESTIMONIAL START -->
-                         <div class="owl-carousel testimonial-home-2 p-b120">
-                            <div class="item">
-                           		 <div class="col-sm-12 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
-                                	<div class="testimonial-1 testimonial-bg m-a30 hover-animation-1 text-center text-white">
-                                        <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/testimonials/pic1.jpg" width="100" height="100" alt=""></div>
-                                        </div>
-                                        <div class="testimonial-text">
-                                            <span class="fa fa-quote-right"></span>
-                                            <p>دعم العملاء الممتاز! القالب نفسه منتهي جدًا. ببساطة نص وهمي للطباعة والصناعة. صناعة الطباعة والتنضيد. كانت لوريم إيبسوم هي الصناعة</p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <h4 class="testimonial-name m-b5">شيلي جونسون -</h4>
-                                            <span class="testimonial-position">رجل أعمال</span>
-                                        </div>
-                                    </div>
-                                </div>
-                             </div>
-                            <div class="item">
-                           		 <div class="col-sm-12 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
-                                	<div class="testimonial-1 testimonial-bg m-a30 hover-animation-1 text-center text-white">
-                                        <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/testimonials/pic2.jpg" width="100" height="100" alt=""></div>
-                                        </div>
-                                        <div class="testimonial-text">
-                                            <span class="fa fa-quote-right"></span>
-                                            <p>دعم العملاء الممتاز! القالب نفسه منتهي جدًا. ببساطة نص وهمي للطباعة والصناعة. صناعة الطباعة والتنضيد. كانت لوريم إيبسوم هي الصناعة</p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <h4 class="testimonial-name m-b5">شيلي جونسون -</h4>
-                                            <span class="testimonial-position">رجل أعمال</span>
-                                        </div>
-                                    </div>
-                                </div>
-                             </div>
-                            <div class="item">
-                           		 <div class="col-sm-12 col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
-                                	<div class="testimonial-1 testimonial-bg m-a30 hover-animation-1 text-center text-white">
-                                        <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/testimonials/pic3.jpg" width="100" height="100" alt=""></div>
-                                        </div>
-                                        <div class="testimonial-text">
-                                            <span class="fa fa-quote-right"></span>
-                                            <p>دعم العملاء الممتاز! القالب نفسه منتهي جدًا. ببساطة نص وهمي للطباعة والصناعة. صناعة الطباعة والتنضيد. كانت لوريم إيبسوم هي الصناعة</p>
-                                        </div>
-                                        <div class="testimonial-detail clearfix">
-                                            <h4 class="testimonial-name m-b5">شيلي جونسون -</h4>
-                                            <span class="testimonial-position">رجل أعمال</span>
-                                        </div>
-                                    </div>
-                                 </div>
-                             </div>
-                        </div>
-                    </div>
-            	</div>
-            </div>
             <!-- TESTIMONIALS SECTION END -->
 
 
@@ -1755,134 +1294,10 @@
         <!-- FOOTER START -->
         <footer class="site-footer footer-large  footer-light	footer-wide">
             <div class="container call-to-action-wrap bg-no-repeat bg-center" style="background-image:url(images/background/bg-site.png);">
-                <div class="p-a30  bg-primary">
-                    <div class="row">
-                        <div class="col-md-8 col-sm-8">
-                            <div class="call-to-action-left text-black">
-                                <h4 class="text-uppercase m-b10 m-t0">اشترك في نشرتنا الإخبارية!</h4>
-                                <span>لا تفوت أي شيء من الشكل بالتسجيل في النشرة الإخبارية.</span>
-                            </div>
-                        </div>
 
-                        <div class="col-md-4 col-sm-4">
-                            <div class="call-to-action-right">
-                                <div class="widget_newsletter">
-                                    <div class="newsletter-bx">
-                                        <form role="search" method="post">
-                                            <div class="input-group">
-                                                <input name="news-letter" class="form-control" placeholder="أدخل بريدك الإلكتروني" type="text">
-                                                <span class="input-group-btn">
-                                                    <button type="submit" class="site-button"><i class="fa fa-paper-plane-o"></i></button>
-                                                </span>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
             </div>
             <!-- FOOTER BLOCKES START -->
-            <div class="footer-top overlay-wraper">
-                <div class="overlay-main"></div>
-                <div class="container">
-                    <div class="row">
-                        <!-- ABOUT COMPANY -->
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget_about">
-                                <!--<h4 class="widget-title">About Company</h4>-->
-                                <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="images/logo-light.png" alt=""></a>
-                                </div>
-								<p class="max-w400">اليوم يمكننا أن نخبرك ، بفضل شغفك وإبداعك في العمل الشاق وخبرتك ، لقد قدمت لنا أجمل إطلالات المنزل.</p>
 
-                                <ul class="social-icons  mt-social-links">
-                                    <li><a href="{{ $companys->first()->google ?? "" }}" class="fa fa-google"></a></li>
-                                    <li><a href="{{ $companys->first()->instagram ?? "" }}" class="fa fa-rss"></a></li>
-                                    <li><a href="{{ $companys->first()->face ?? "" }}" class="fa fa-facebook"></a></li>
-                                    <li><a href="{{ $companys->first()->twitter ?? "" }}" class="fa fa-twitter"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- RESENT POST -->
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget_address_outer">
-                                <h4 class="widget-title">اتصل بنا</h4>
-                                <ul class="widget_address">
-                                    <li>{{ $companys->first()->address ?? "" }}</li>
-                                    <li>{{ $companys->first()->email ?? "" }}</li>
-                                    <li>{{ $companys->first()->phone ?? "" }}</li>
-
-                                </ul>
-
-                            </div>
-                        </div>
-
-                        <!-- USEFUL LINKS -->
-                        <div class="col-lg-3 col-md-6 col-sm-6 footer-col-3">
-                            <div class="widget widget_services inline-links">
-                                <h4 class="widget-title">روابط مفيدة</h4>
-                                <ul>
-                                    <li><a href="about-1.html">حول</a></li>
-                                    <li><a href="project-grid.html">المشاريع</a></li>
-                                    <li><a href="blog-grid.html">مدونة</a></li>
-                                    <li><a href="contact-1.html">اتصل بنا</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- TAGS -->
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-							<div class="widget recent-posts-entry-date">
-                                <h4 class="widget-title">المنشور الاخير</h4>
-                                <div class="widget-post-bx">
-                                    <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
-                                        <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-											<strong class="p-date">24</strong>
-                                            <span class="p-month">أبريل</span>
-                                            <span class="p-year">2019</span>
-                                        </div>
-                                        <div class="mt-post-info">
-                                            <div class="mt-post-header">
-                                                <h6 class="post-title"><a href="blog-single.html">على هذه الحزم ، نبني الأحلام.</a></h6>
-                                            </div>
-                                            <div class="mt-post-meta">
-                                                <ul>
-                                                    <li class="post-author"><i class="fa fa-user"></i>بواسطة المشرف</li>
-                                                    <li class="post-comment"><i class="fa fa-comments"></i> 28</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
-                                        <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-                                            <strong class="p-date">30</strong>
-                                            <span class="p-month">مايو</span>
-                                            <span class="p-year">2019</span>
-                                        </div>
-                                        <div class="mt-post-info">
-                                            <div class="mt-post-header">
-                                                <h6 class="post-title"><a href="blog-single.html">سنكون ضجة كبيرة بالنسبة لك التجديد المقبل</a></h6>
-                                            </div>
-                                            <div class="mt-post-meta">
-                                                <ul>
-                                                    <li class="post-author"><i class="fa fa-user"></i>بواسطة المشرف</li>
-                                                    <li class="post-comment"><i class="fa fa-comments"></i> 29</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- NEWSLETTER -->
-
-                    </div>
-                </div>
-            </div>
             <!-- FOOTER COPYRIGHT -->
             <div class="footer-bottom overlay-wraper">
                 <div class="overlay-main"></div>
@@ -1896,12 +1311,8 @@
             </div>
         </footer>
         <!-- FOOTER END -->
-
-
         <!-- BUTTON TOP START -->
 		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
-
-
     </div>
 
 <!-- LOADING AREA START ===== -->

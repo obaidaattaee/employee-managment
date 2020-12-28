@@ -104,18 +104,21 @@ Route::namespace('front')->group(function () {
 
 Route::prefix('company')->middleware('company' , 'auth')->namespace('App\Http\Controllers\Company')->group(function () {
     Route::get('/' , 'CompanyController@index')->name('company.index') ;
-    Route::get('/employees' , 'EmployeeController@index')->name('company.employees') ;
-    Route::get('/employees/q' , 'EmployeeController@index')->name('company.employees.qwqwqw') ;
-    Route::get('/employee/{user}/report' , 'EmployeeController@reports')->name('company.employee.reports') ;
-    Route::get('/employee/{user}/report/{report}/show' , 'EmployeeController@show')->name('company.employee.reports.show') ;
-    Route::get('/employee/percentage/' , 'EmployeeController@percentage')->name('company.employees.percentage') ;
-    Route::post('/employee/{user}/cahnge/salary' , 'EmployeeController@cahngeEmployeeSalary')->name('cahnge.employee.salary') ;
+    Route::middleware('company_verified')->group(function () {
+        Route::get('/employees' , 'EmployeeController@index')->name('company.employees') ;
+        Route::get('/employees/q' , 'EmployeeController@index')->name('company.employees.qwqwqw') ;
+        Route::get('/employee/{user}/report' , 'EmployeeController@reports')->name('company.employee.reports') ;
+        Route::get('/employee/{user}/report/{report}/show' , 'EmployeeController@show')->name('company.employee.reports.show') ;
+        Route::get('/employee/percentage/' , 'EmployeeController@percentage')->name('company.employees.percentage') ;
+        Route::post('/employee/{user}/cahnge/salary' , 'EmployeeController@cahngeEmployeeSalary')->name('cahnge.employee.salary') ;
 
-    Route::get('/cusromer' , 'CustomerController@index')->name('company.customers') ;
-    Route::get('/customer/{user}/report' , 'CustomerController@reports')->name('company.customer.reports') ;
-    Route::get('/customer/{user}/report/{report}/show' , 'CustomerController@show')->name('company.customer.reports.show') ;
+        Route::get('/cusromer' , 'CustomerController@index')->name('company.customers') ;
+        Route::get('/customer/{user}/report' , 'CustomerController@reports')->name('company.customer.reports') ;
+        Route::get('/customer/{user}/report/{report}/show' , 'CustomerController@show')->name('company.customer.reports.show') ;
 
-    Route::get('/monthly/reports' , 'CompanyController@monthlyReplorts')->name('company.monthly.reports') ;
+        Route::get('/monthly/reports' , 'CompanyController@monthlyReplorts')->name('company.monthly.reports') ;
+
+    });
 
 });
 

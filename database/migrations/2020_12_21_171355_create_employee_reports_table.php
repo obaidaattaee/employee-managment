@@ -19,6 +19,7 @@ class CreateEmployeeReportsTable extends Migration
             $table->foreignId('customer_id')->constrained('users' , 'id');
             $table->string('employee_name');
             $table->foreignId('company_id')->constrained('users' , 'id');
+            $table->string('work_space');
             $table->foreignId('employee_id')->constrained('users' , 'id');
             $table->integer('operating_expenses');
             $table->integer('working_hours');

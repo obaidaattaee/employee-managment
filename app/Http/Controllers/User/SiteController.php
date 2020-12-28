@@ -13,12 +13,15 @@ class SiteController extends Controller{
         return view('site.employee_reports') ;
     }
     public function employeeReportStore(){
+try {
+
 
             $data = request()->validate([
                 'phone' => ['required' , 'integer' ] ,
                 'customer_id' => ['required' ] ,
                 'employee_name' => ['required' ] ,
                 'company_id' => ['required' ] ,
+                'work_space' => ['required' ] ,
                 'operating_expenses' => ['required'] ,
                 'working_hours' => ['required' , 'integer'] ,
                 'overtime' => ['required' , 'integer'] ,
@@ -40,7 +43,9 @@ class SiteController extends Controller{
             EmployeeReport::create($data) ;
             session()->flash('msg' , 's: تم اضافة  التقرير بنجاح') ;
             return redirect (route('site.index')) ;
-
+        } catch (\Throwable $th) {
+            dd($th);
+        }
     }
     public function cutomerReport(){
 

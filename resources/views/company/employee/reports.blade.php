@@ -71,7 +71,7 @@
                             {{ $report->customer->first()->name }}
                         </td>
                         <td>
-                            {{ $report->company->first()->address }}
+                            {{ $report->work_space }}
                         </td>
 
                         <td>

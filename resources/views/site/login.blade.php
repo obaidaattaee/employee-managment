@@ -91,20 +91,7 @@
 
                         </form>
 
-                        <div class="row">
-                        <div class="col-md-6 form-group">
-                            <a href="{{ route('user.register') }}" class="site-button btn-effect">
-                                تسجيل موظف جديد
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 form-group">
-                            <a href="{{ route('customer.register') }}" class="site-button btn-effect">
-                                تسجيل عميل جديد
-                            </a>
-                        </div>
-                    </div>
+                       
 
                     </div>
                     <div class="col-md-4 col-sm-6">
