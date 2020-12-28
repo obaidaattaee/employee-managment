@@ -19,7 +19,7 @@ class CompanyVerifiedMiddleware
         if (auth()->check()) {
             if (auth()->user()->active !== 1) {
                 session()->flash('msg' , 'w: لم يتم تفعيل حسابك بعد يرجى مراجعة مدير النظام');
-                return redirect(route('home')) ;
+                return redirect(route('company.index')) ;
             }
         }
         return $next($request);
