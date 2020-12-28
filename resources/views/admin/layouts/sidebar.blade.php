@@ -90,10 +90,10 @@
                         <a href="{{route('companys.index')}}">
                         بيانات الشركة </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a href="{{route('slide')}}">
                         السلايدر </a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{route('services.index')}}">
                         خدمات الشركة </a>
