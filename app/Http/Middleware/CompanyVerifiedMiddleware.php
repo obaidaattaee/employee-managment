@@ -17,7 +17,7 @@ class CompanyVerifiedMiddleware
     public function handle(Request $request, Closure $next)
     {
         if (auth()->check()) {
-            if (auth()->user()->active !== 1) {
+            if (auth()->user()->active == 0) {
                 session()->flash('msg' , 'w: لم يتم تفعيل حسابك بعد يرجى مراجعة مدير النظام');
                 return redirect(route('company.index')) ;
             }
