@@ -27,7 +27,7 @@
                         </form>
                     </div>
                 </div>
-                <table class="table table-striped table-bordered table-hover" id="myTable">
+                <table class="table table-striped table-bordered table-hover" id="example">
                 <thead>
                 <tr>
                     <th>
