@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -118,6 +119,12 @@ Route::prefix('company')->middleware('company' , 'auth')->namespace('App\Http\Co
 
         Route::get('/monthly/reports' , 'CompanyController@monthlyReplorts')->name('company.monthly.reports') ;
 
+
+        Route::get('employee/create' , 'EmployeeController@create')->name('company.employee.create');
+        Route::post('employee/create' , 'EmployeeController@store')->name('company.employee.store');
+        Route::get('employee/{user}/edit' , 'EmployeeController@edit')->name('company.employee.edit');
+        Route::get('employee/{user}/delete' , 'EmployeeController@delete')->name('company.employee.delete');
+        Route::post('employee/{user}/edit' , 'EmployeeController@update')->name('company.employee.update');
     });
 
 });

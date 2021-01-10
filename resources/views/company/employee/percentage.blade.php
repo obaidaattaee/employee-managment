@@ -35,6 +35,9 @@
                    <th>
                         النسبة
                    </th>
+                   <th>
+                        سعر الساعة
+                   </th>
 
                 </tr>
                 </thead>
@@ -48,6 +51,9 @@
                         </td>
                         <td>
                             {{ round($employee->salary / 30 / 8 , 2) }}
+                        </td>
+                        <td>
+                            {{ $employee->salary / ($employee->reports->where(    'created_at', '>=', Carbon\Carbon::now()->startOfMonth()->subMonth()->toDateString() )->sum('working_hours') == 0 ?? 1) }}
                         </td>
 
                         {{-- <td>

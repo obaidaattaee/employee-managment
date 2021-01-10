@@ -101,18 +101,18 @@
                                     <input name="evaluation" type="text" required class="form-control" placeholder="التقييم">
                                 </div>
 
-                                    <div class="col-md-6 form-group custom-file">
-                                    {{-- <div class=""> --}}
-                                        <label class="custom-file-label" for="images"> الصور</label>
-                                        <input type="file" name="imageFile[]" class="custom-file-input" multiple id="images">
-                                    {{-- </div> --}}
-                                </div>
-
                                     <div class="col-md-6 form-group">
                                     <label> ملاحظات </label>
                                     <textarea name="notes" rows="4" class="form-control " required placeholder="ملاحظات"></textarea>
                                 </div>
 
+
+                                <div class="col-md-6 form-group custom-file">
+                                    {{-- <div class=""> --}}
+                                        <label class="custom-file-label" for="images"> الصور</label>
+                                        <input type="file" name="imageFile[]" class="custom-file-input" multiple id="images">
+                                    {{-- </div> --}}
+                                </div>
 
                             </div>
                             {{-- {{dd('request::class')}}; --}}

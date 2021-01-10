@@ -12,7 +12,11 @@
                     <i class="fa fa-globe"></i> عرض تقرير العميل
                 </div>
                 <div class="tools">
-
+                    <a href="{{route('company.customer.reports' , ['user' => $user])}}" >
+                        <button class="btn btn-info btn-sm">
+                            رجوع
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="portlet-body">

@@ -13,7 +13,11 @@
                 </div>
                 <div class="tools">
                     <button id="print" onclick="event.preventDefault() ; print()" class="btn btn-success btn-sm">طباعة </button>
-
+                    <a href="{{route('company.customers')}}" >
+                        <button class="btn btn-info btn-sm">
+                            رجوع
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="portlet-body">

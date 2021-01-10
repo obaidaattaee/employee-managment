@@ -12,7 +12,11 @@
                     <i class="fa fa-globe"></i> عرض تقرير الموظف
                 </div>
                 <div class="tools">
-
+                    <a href="{{route('company.employee.reports' , ['user' => $user])}}" >
+                        <button class="btn btn-info btn-sm">
+                            رجوع
+                        </button>
+                    </a>
                 </div>
             </div>
             <div class="portlet-body">

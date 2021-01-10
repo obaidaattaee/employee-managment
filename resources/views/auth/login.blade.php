@@ -176,6 +176,11 @@ License: You must have a valid license purchased only from themeforest(the above
             <a href="{{route('register')}}" id="register-btn">تسجيل حساب جديد</a>
 			</p>
 		</div>
+		<div class="create-account">
+			<p>
+            <a href="{{route('home')}}" id="register-btn">رجوع  </a>
+			</p>
+		</div>
 	</form>
 
 </div>

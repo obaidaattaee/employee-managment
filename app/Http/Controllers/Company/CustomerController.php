@@ -52,7 +52,8 @@ class CustomerController extends Controller{
         $report = CustomerReport::findOrFail($report);
         // dd($report);
         return view('company.customers.show')
-                ->with('report' , $report);
+                ->with('report' , $report)
+                ->with('user' , $user);
     }
     public function percentage(){
         $employees = User::where('type' , 'employee')->where('code' , auth()->user()->code)->get();
@@ -71,4 +72,5 @@ class CustomerController extends Controller{
         return redirect ()->route('company.employees');
 
     }
+   
 }

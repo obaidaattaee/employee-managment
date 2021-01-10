@@ -13,7 +13,14 @@
                 </div>
                 <div class="tools">
                     <button id="print" onclick="event.preventDefault() ; print()" class="btn btn-success btn-sm">طباعة </button>
-
+                    @if ( Route::current()->getName() == "company.employees")
+                    @else
+                    <a href="{{route('company.employee.create')}}" >
+                        <button class="btn btn-info btn-sm">
+                            اضافة موظف
+                        </button>
+                    </a>
+                    @endif
                 </div>
             </div>
             <div class="portlet-body">
@@ -40,6 +47,9 @@
                            </th>
                            <th>
                                 العنوان
+                           </th>
+                           <th>
+                                المسمى الوظيفي
                            </th>
                            <th>
                                 رقم الهاتف
@@ -77,6 +87,9 @@
                         </td>
                         <td>
                             {{ $employee->address }}
+                        </td>
+                        <td>
+                            {{ $employee->title }}
                         </td>
 
                         <td>
@@ -121,7 +134,16 @@
                             <a href="{{ route('company.employee.reports' , ['user' => $employee->id]) }}" class="btn btn-success btn-sm">الانجازات</a>
 
                             @else
-
+                            <a href="{{route('company.employee.edit' , ['user' => $employee->id])}}" >
+                                <button class="btn btn-primary btn-sm">
+                                     تعديل
+                                </button>
+                            </a>
+                            <a href="{{route('company.employee.delete' , ['user' => $employee->id])}}" >
+                                <button class="btn btn-danger btn-sm">
+                                     حذف
+                                </button>
+                            </a>
                             @endif
 </td>
                     </tr>
