@@ -130,8 +130,7 @@ class EmployeeController extends Controller
         // dd($companies);
         if ($year != null) {
             $companies->each(function ($company) use($year , &$employees){
-            $count = $company->employees
-                        ->whereIn('id' , EmployeeReport::whereYear('created_at' , $year)
+            $count = $company->whereIn('id' , EmployeeReport::whereYear('created_at' , $year)
                                             ->pluck('employee_id')->toArray()
                                 );
             if ($count->count() > 0) {
@@ -142,7 +141,7 @@ class EmployeeController extends Controller
         }
         if ($month != null) {
             $companies->each(function ($company) use($month , &$employees){
-                $count = $company->employees->whereIn('id' , EmployeeReport::whereMonth('created_at' , $month)->pluck('employee_id')->toArray() );
+                $count = $company->whereIn('id' , EmployeeReport::whereMonth('created_at' , $month)->pluck('employee_id')->toArray() );
                 if ($count->count() > 0) {
                     $employees = array_merge($employees , [$count->first()->company->id]);
                 }
@@ -150,7 +149,7 @@ class EmployeeController extends Controller
                 $companies = $companies->whereIn('id' , $employees);
         }
 
-       
+
         $companies = $companies->get();
         return view('company.employee.yearly_reports')->with('companies' , $companies);
     }
