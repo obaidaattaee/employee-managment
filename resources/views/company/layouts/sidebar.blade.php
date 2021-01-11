@@ -75,7 +75,7 @@
             </li>
             <!-- BEGIN ANGULARJS LINK -->
             <li class="tooltips" >
-                <a href="{{ route('company.monthly.reports') }}" target="_blank">
+                <a href="{{ route('company.monthly.reports') }}">
                     <i class="icon-paper-plane"></i>
                     <span class="title">التقارير الشهريه</span>
                 </a>
