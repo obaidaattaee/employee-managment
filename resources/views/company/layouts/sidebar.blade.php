@@ -80,6 +80,12 @@
                     <span class="title">التقارير الشهريه</span>
                 </a>
             </li>
+            <li class="tooltips" >
+                <a href="{{ route('company.employee.yearlyReports') }}" >
+                    <i class="icon-paper-plane"></i>
+                    <span class="title">التقارير سنوية</span>
+                </a>
+            </li>
             <!-- END ANGULARJS LINK -->
 
 

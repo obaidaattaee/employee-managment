@@ -125,6 +125,7 @@ Route::prefix('company')->middleware('company' , 'auth')->namespace('App\Http\Co
         Route::get('employee/{user}/edit' , 'EmployeeController@edit')->name('company.employee.edit');
         Route::get('employee/{user}/delete' , 'EmployeeController@delete')->name('company.employee.delete');
         Route::post('employee/{user}/edit' , 'EmployeeController@update')->name('company.employee.update');
+        Route::get('employee/yearlyReports' , 'EmployeeController@yearlyReports')->name('company.employee.yearlyReports');
     });
 
 });

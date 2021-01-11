@@ -122,4 +122,36 @@ class EmployeeController extends Controller
         وظف بنجاح');
         return redirect()->route('company.employees.qwqwqw');
     }
+    public function yearlyReports(){
+        $companies = User::where('type' , 'employee')->where('code' , auth()->user()->code);
+        $year = request()['year'] ;
+        $month = request()['month'] ;
+        $employees = [] ;
+        // dd($companies);
+        if ($year != null) {
+            $companies->each(function ($company) use($year , &$employees){
+            $count = $company->employees
+                        ->whereIn('id' , EmployeeReport::whereYear('created_at' , $year)
+                                            ->pluck('employee_id')->toArray()
+                                );
+            if ($count->count() > 0) {
+                $employees = array_merge($employees , [$count->first()->company->id]);
+            }
+            });
+            $companies = $companies->whereIn('id' , $employees);
+        }
+        if ($month != null) {
+            $companies->each(function ($company) use($month , &$employees){
+                $count = $company->employees->whereIn('id' , EmployeeReport::whereMonth('created_at' , $month)->pluck('employee_id')->toArray() );
+                if ($count->count() > 0) {
+                    $employees = array_merge($employees , [$count->first()->company->id]);
+                }
+                });
+                $companies = $companies->whereIn('id' , $employees);
+        }
+
+       
+        $companies = $companies->get();
+        return view('company.employee.yearly_reports')->with('companies' , $companies);
+    }
 }

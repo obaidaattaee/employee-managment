@@ -14,7 +14,7 @@
                     <div class="tools">
                         <button id="print" onclick="event.preventDefault() ; print()" class="btn btn-success btn-sm">طباعة
                         </button>
-                        <a href="{{route('company.employees')}}" >
+                        <a href="{{ url()->previous() }}" >
                             <button class="btn btn-info btn-sm">
                                 رجوع
                             </button>
