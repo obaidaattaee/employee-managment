@@ -72,8 +72,8 @@ License: You must have a valid license purchased only from themeforest(the above
 			 ادخل المعلومات المطلوبه بالاسفل :
 		</p>
 		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">اسم الموظف</label>
-			<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="اسم الزبون" name="name"/>
+			<label class="control-label visible-ie8 visible-ie9">اسم </label>
+			<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="الاسم " name="name"/>
 		</div>
 		<div class="form-group">
 			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->

@@ -55,6 +55,9 @@
                    <th>
                         تاريخ التسجيل
                    </th>
+                   <th>
+                        صافي الربح
+                   </th>
 
                     <th>
                          الحالة
@@ -85,6 +88,7 @@
                             <td>{{$overtime}}</td>
                             <td>{{$operating}}</td>
                             <td>{{$company->created_at}}</td>
+                            <td>{{$company->salary - $operating}}</td>
 
                             <td>
                                 <a href="{{route('company.employee.reports' , ['user' => $company->id])}}" class="btn btn-success btn-sm">تفاصيل </a>
